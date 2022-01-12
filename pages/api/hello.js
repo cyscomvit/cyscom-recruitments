@@ -1,5 +1,12 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import {initializeApp} from 'firebase/app';
+import {getFirestore} from 'firebase/firestore';
 
-export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' })
-}
+
+const firebaseApp = initializeApp({
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+});
+
+const db = getFirestore();
+
