@@ -12,13 +12,17 @@ const FormComponent = ({handleSubmit}) => {
     const [chosenDepartments, setChosenDepartments] = useState([]);
     const [errorMessage, setErrorMessage] = useState('');
     const [form] = Form.useForm();
-
+    const layout = {
+        labelCol: { span: 4 },
+        wrapperCol: { span: 8 },
+      };
   return (
       <>
         <Select
+            
             mode='multiple'
             allowClear
-            style={{ width: '100%' }}
+            style={{ width: '50%' , margin: '1%'}}
             placeholder='Select departments'
             onChange={(value) => {
                 setErrorMessage('');
@@ -60,7 +64,7 @@ const FormComponent = ({handleSubmit}) => {
             )}
             {errorMessage}
         <Form.Item>
-            <Button type="primary" htmlType="submit" onClick={() => {
+            <Button style={{margin : "1%"}} type="primary" htmlType="submit" onClick={() => {
                 if(chosenDepartments.length === 0) {
                     setErrorMessage('Please select at least one department');
                     return;

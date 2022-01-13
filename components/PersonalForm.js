@@ -14,11 +14,15 @@ import {
 } from 'antd';
 
 const PersonalForm = ({handleSubmit}) => {
+    const layout = {
+        labelCol: { span: 4 },
+        wrapperCol: { span: 8 },
+      };
     const [form] = Form.useForm(); 
     //form for name, personal email , vit email , phone number, college year,course,registeration number,slot preference
     return (
         <Form
-            form={form}
+            {...layout}
             name="dynamic_form_nest_item"
             onFinish={handleSubmit}
             >
@@ -77,16 +81,29 @@ const PersonalForm = ({handleSubmit}) => {
                 <Input />
             </Form.Item>
             <Form.Item
-                name="slotPreference"
-                label="Slot Preference"
-                rules={[{ required: true, message: 'Please input your slot preference!' }]}
+                name="datePreference"
+                label="Date Preference"
+                rules={[{ required: true, message: 'Please input your date preference!' }]}
             >
-                <DatePicker></DatePicker>
-                <TimePicker></TimePicker>
+                <Select>
+                    <Select.Option value="1">1</Select.Option>
+                    <Select.Option value="2">2</Select.Option>
+                    <Select.Option value="3">3</Select.Option>
+                </Select>
+            </Form.Item>
+            <Form.Item
+                name="timePreference"
+                label="Time Preference"
+                rules={[{ required: true, message: 'Please input your time preference!' }]}
+            >
+                <Select>
+                    <Select.Option value="1">1</Select.Option>
+                    <Select.Option value="2">2</Select.Option>
+                    <Select.Option value="3">3</Select.Option>
+                </Select>
             </Form.Item>
             <Form.Item>
-            <Button type="primary" htmlType="submit" onClick={() => {
-               
+            <Button style={{margin : "2%"}} type="primary" htmlType="submit" onClick={() => {
                 form.validateFields();
             }}>
                 Submit

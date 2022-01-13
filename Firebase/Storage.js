@@ -1,13 +1,14 @@
 import initFirebase from "./Init";
-import { getFirestore , collection ,addDoc} from "firebase/firestore";
+import { getFirestore , doc , setDoc } from "firebase/firestore";
 
 
 const app = initFirebase();
-const db = getFirestore();
+const db = getFirestore(app);
 
 const addToFirestore = async (data) => {
-    const collectionRef = collection(db, "users");
-    await addDoc(collectionRef, data);
+    console.log(db);
+    console.log(data);
+    await setDoc(doc(db,"users",data.uid),data);
 }
 
 export default addToFirestore;

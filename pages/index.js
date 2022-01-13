@@ -4,16 +4,13 @@ import Header from '../components/Header'
 import Login from '../components/Login'
 import addToFirestore from '../Firebase/Storage'
 import PersonalForm from '../components/PersonalForm'
+import Router from 'next/router';
+import { useContext , useEffect , useState } from 'react'
+import AppContext from '../context/state'
+import Navigation from '../components/Navigation'
+import HomePage from '../components/HomePage'
 export default function Home() {
-  const handleSubmit = (values) => {
-    addToFirestore(values);
-  }
-  return (
-    <>
-    <Header></Header>
-    <Login></Login>
-    <FormComponent handleSubmit = {handleSubmit} ></FormComponent>
-    <PersonalForm handleSubmit = {(values)=>{console.log(values)}}></PersonalForm>
-   </>
-  )
+      return (
+        <HomePage></HomePage>
+      )
 }
