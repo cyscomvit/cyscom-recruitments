@@ -15,7 +15,9 @@ const readFromFirestore = async (user) => {
         return myDoc.data();
     }
     else{
-        console.log("No such document!");
+        return {
+            error : "Interview not found"
+        }
     }
 }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import addToFireStore from '../Firebase/Storage'
+import addToFireStore from '../Firebase/StoreUser'
 import { useContext } from 'react'
 import AppContext from '../context/state'
 import { Button } from 'antd'
@@ -14,7 +14,9 @@ export default function Done() {
         await addToFireStore({
             personalData: value.state.personalData,
             departmentData: value.state.departmentData,
-            uid : value.state.user.email
+            uid : value.state.user.email,
+            result : "not_published",
+            selectedDepartments : [],
         })
 
         router.replace('/');

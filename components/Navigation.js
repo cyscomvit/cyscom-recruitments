@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useContext , useEffect} from 'react';
 import AppContext from '../context/state';
 
-export default function Navigation() {
+export default function Navigation({isAdmin}) {
 
   const value = useContext(AppContext);
 
@@ -30,6 +30,10 @@ export default function Navigation() {
         <Menu.Item key = "results" icon = {<NotificationOutlined></NotificationOutlined>}>
             <Link href="/results">Results</Link>
         </Menu.Item>
+
+        {isAdmin ? <Menu.Item key = "admin" icon = {<NotificationOutlined></NotificationOutlined>}>
+            <Link href="/admin">Admin</Link>
+        </Menu.Item> : null}
       </Menu>
     );
 }

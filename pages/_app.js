@@ -1,4 +1,4 @@
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.dark.min.css';
 import { useState } from 'react';
 import AppContext from '../context/state';
 import Navigation from '../components/Navigation';
@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }) {
         setUser,
       }}
     >
-      <Navigation></Navigation>
+      <Navigation isAdmin={user && user.email == "hemangahujaeotw@gmail.com"}></Navigation>
       <Component {...pageProps} />
     </AppContext.Provider>
   );
