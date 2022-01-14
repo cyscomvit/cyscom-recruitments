@@ -1,16 +1,11 @@
-import React, { useState } from 'react';
+
 import {
   Form,
   Input,
   Button,
-  Radio,
+
   Select,
-  Cascader,
-  DatePicker,
-  InputNumber,
-  TreeSelect,
-  Switch,
-  TimePicker,
+
 } from 'antd';
 
 const PersonalForm = ({handleSubmit}) => {

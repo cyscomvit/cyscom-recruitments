@@ -8,7 +8,6 @@ export default function CandidateForm({data}) {
             <Descriptions title="Personal Data" bordered>
                 <Descriptions.Item label="Name">{data.personalData.name}</Descriptions.Item>
                 <Descriptions.Item label="Personal Email">{data.personalData.personalEmail}</Descriptions.Item>
-                <Descriptions.Item label="Personal Email">{data.personalData.personalEmail}</Descriptions.Item>
                 <Descriptions.Item label="VIT Email">{data.personalData.vitEmail}</Descriptions.Item>
                 <Descriptions.Item label="College Year">{data.personalData.collegeYear}</Descriptions.Item>
                 <Descriptions.Item label="Course">{data.personalData.course}</Descriptions.Item>
@@ -21,7 +20,7 @@ export default function CandidateForm({data}) {
                 {
                     data && Object.entries(data.departmentData).map((entry, index) => {
                         return (
-                            <Descriptions.Item label={entry[0]} key={index}>{entry[1].reason}</Descriptions.Item>
+                            <Descriptions.Item labelStyle={{width: "20%"}} label={entry[0]} key={index}>{entry[1].reason}</Descriptions.Item>
                         )
                     }
                     )

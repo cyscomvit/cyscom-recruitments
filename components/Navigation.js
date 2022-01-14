@@ -1,5 +1,5 @@
 import { Menu } from 'antd';
-import { HomeFilled  , FormOutlined ,NotificationOutlined , SnippetsOutlined} from '@ant-design/icons';
+import { HomeFilled  , FormOutlined ,NotificationOutlined , SnippetsOutlined , CheckCircleOutlined , EditOutlined} from '@ant-design/icons';
 import Link from 'next/link';
 import { useContext , useEffect} from 'react';
 import AppContext from '../context/state';
@@ -21,7 +21,7 @@ export default function Navigation({isAdmin}) {
         <Menu.Item key="home" icon={<HomeFilled></HomeFilled>}>
             <Link href="/">Home</Link>
         </Menu.Item>
-        <Menu.Item key="form" icon = {<FormOutlined></FormOutlined>} >
+        <Menu.Item key="form" icon = {<EditOutlined></EditOutlined>} >
             <Link href="/form">Form</Link>
         </Menu.Item>
         <Menu.Item key="interview" icon = {<SnippetsOutlined></SnippetsOutlined>}>
@@ -31,9 +31,16 @@ export default function Navigation({isAdmin}) {
             <Link href="/results">Results</Link>
         </Menu.Item>
 
-        {isAdmin ? <Menu.Item key = "admin" icon = {<NotificationOutlined></NotificationOutlined>}>
-            <Link href="/admin">Admin</Link>
-        </Menu.Item> : null}
+        {isAdmin ?
+        <>
+         <Menu.Item key = "review" icon = {<FormOutlined></FormOutlined>}>
+            <Link href="/admin/forms">Review Forms</Link>
+        </Menu.Item>
+        <Menu.Item key = "publish" icon = {<CheckCircleOutlined></CheckCircleOutlined>}>
+            <Link href="/admin/publish">Publish Results</Link>
+        </Menu.Item>
+        </>
+         : null}
       </Menu>
     );
 }

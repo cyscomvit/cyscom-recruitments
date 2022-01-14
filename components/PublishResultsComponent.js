@@ -1,7 +1,7 @@
 import { Form, Input, Button, Space, Select } from 'antd';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
 const { Option } = Select;
-const PubResultComp = ({onSubmit}) => {
+const PubResultComp = ({onSubmit , allEmails}) => {
 
   const onFinish = values => {
     console.log('Received values of form: ', values);
@@ -25,7 +25,11 @@ const PubResultComp = ({onSubmit}) => {
                   name={[name, 'email']}
                   rules={[{ required: true, message: 'Missing first name' }]}
                 >
-                  <Input placeholder="Email" />
+                  <Select style={{"width": "30rem"}} mode='multiple' placeholder = 'Email'>
+                    {allEmails.map((email) => {
+                        return <Option key={email} value={email}>{email}</Option>
+                    })}
+                    </Select>
                 </Form.Item>
                <Form.Item
                     name = {[name, 'departmentsSelected']}

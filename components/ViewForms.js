@@ -8,6 +8,7 @@ export default function ViewForms() {
     const [loading, setLoading] = useState(true);
     const [currentId, setCurrentId] = useState(null);
     const [currentForm, setCurrentForm] = useState(null);
+    const [error, setError] = useState(null);
     useEffect(() => {
         const getIds = async () => {
             const Myids = await getAllDocs();
@@ -30,21 +31,37 @@ export default function ViewForms() {
         }
         getData(ids[currentId]);
     }, [currentId]);
+
     const handleNext = () => {
 
         if(currentId == ids.length - 1){
-            console.log("end");
+            setError("No more forms to view");
             return;
         }
         setCurrentId(currentId + 1);
+        setError(null);
+    }
+    const handleBack = () => {
+        if(currentId == 0){
+            setError("No more forms to view");
+            return;
+        }
+        setCurrentId(currentId - 1);
+        setError(null);
     }
     return (
         <div>
-            {loading ? <div>Loading...</div> : <div>
-               
-                <div>{currentForm.error ? currentForm.error : <CandidateForm data = {currentForm}></CandidateForm>}</div>
-                <Button style={{margin:"10px"}} onClick = {handleNext}>Next</Button>
-            </div>}
+            {
+                
+                (loading ? <div>Loading...</div> : <div>
+                    {error ? <h1>{error}</h1> : null}
+                    <div>{currentForm.error ? currentForm.error : <CandidateForm data = {currentForm}></CandidateForm>}</div>
+                    
+                </div>)
+                
+            }
+            <Button style={{margin:"10px"}} onClick = {handleNext}>Next</Button>
+                    <Button style={{margin:"10px"}} onClick = {handleBack}>Back</Button>
         </div>
     )
 }
