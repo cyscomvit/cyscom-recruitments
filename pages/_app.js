@@ -2,6 +2,7 @@ import 'antd/dist/antd.dark.min.css';
 import { useState } from 'react';
 import AppContext from '../context/state';
 import Navigation from '../components/Navigation';
+import initFirebase from '../Firebase/Init';
 function MyApp({ Component, pageProps }) {
 
   const [user, setUser] = useState(null);
@@ -10,6 +11,7 @@ function MyApp({ Component, pageProps }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [pageState, setPageState] = useState('home');
   const [formState, setFormState] = useState(0);
+  const app = initFirebase();
   return (
     <AppContext.Provider
       value={{
@@ -29,10 +31,11 @@ function MyApp({ Component, pageProps }) {
         setUser,
       }}
     >
-      <Navigation isAdmin={user && user.email == "hemangahujaeotw@gmail.com"}></Navigation>
+      <Navigation isAdmin={user && user.email == "hemang.ahuja2020@vitstudent.ac.in"}></Navigation>
       <Component {...pageProps} />
     </AppContext.Provider>
   );
 }
+
 
 export default MyApp

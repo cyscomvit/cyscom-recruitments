@@ -6,6 +6,7 @@ import Router from 'next/router';
 import FormSteps from '../components/Steps'
 export default function Department() {
     const value = useContext(AppContext);
+    value.setPageState("department");
     const handleDepartmentSubmit = (values) => {
         value.setDepartmentData(values);
         value.setFormState(3);

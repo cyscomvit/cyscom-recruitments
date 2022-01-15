@@ -8,7 +8,9 @@ const db = getFirestore(app);
 const addToFirestore = async (data) => {
     console.log(db);
     console.log(data);
-    await setDoc(doc(db,"users",data.uid),data);
+    const docRef = doc(db,"users",data.uid);
+    console.log("docref",docRef);
+    await setDoc(docRef,data);
 }
 
 export default addToFirestore;

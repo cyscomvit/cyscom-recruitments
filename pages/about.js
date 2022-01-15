@@ -1,11 +1,12 @@
 import React from 'react'
-import { useContext , useEffect } from 'react'
+import { useContext  } from 'react'
 import AppContext from '../context/state'
 import PersonalForm from '../components/PersonalForm';
 import FormSteps from '../components/Steps'
 import Router from 'next/router';
 export default function About() {
     const value = useContext(AppContext);
+    value.setPageState("about");
     const handlePersonalSubmit = (values) => {
         value.setPersonalData(values);
         value.setFormState(2);

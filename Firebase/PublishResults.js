@@ -15,7 +15,7 @@ const updateFirestore = async (selectedPeople) => {
 
         const docRef = doc(db,"users",docIter.id);
         
-        const found = selectedPeople.find(person => person.email === docIter.id);
+        const found = selectedPeople.find(person => person.email.includes(docIter.id));
         if(found){
             await updateDoc(docRef,{
                 result : "selected",

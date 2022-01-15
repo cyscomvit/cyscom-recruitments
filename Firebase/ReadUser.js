@@ -16,7 +16,7 @@ const readFromFirestore = async (user) => {
     }
     else{
         return {
-            error : "Interview not found"
+            error : "Not Found"
         }
     }
 }

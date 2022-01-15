@@ -4,7 +4,7 @@ import Login from '../components/Login';
 import AppContext from '../context/state'
 export default function InterviewFunction() {
     const value = useContext(AppContext);
-    
+    value.setPageState("interview");
     const handleLogin = (user) => {
         if(user){
         value.setIsLoggedIn(true);

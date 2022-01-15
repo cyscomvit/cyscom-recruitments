@@ -1,12 +1,11 @@
 import { useContext } from "react";
 import Router from "next/router";
-import { useEffect } from "react";
 import AppContext from "../context/state";
 import Login from "../components/Login";
 import FormSteps from "../components/Steps";
 export default function Form() {
     const value = useContext(AppContext);
-
+    value.setPageState("form");
 
   const handleLogin = (user) => {
     if(user){

@@ -2,7 +2,7 @@ import { useState , useEffect } from "react"
 import getAllDocs from "../Firebase/ReadAllUsers";
 import readFromFirestore from "../Firebase/ReadUser";
 import CandidateForm from "./CandidateForm";
-import { Button } from "antd";
+import { Button , Alert} from "antd";
 export default function ViewForms() {
     const [ids, setIds] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -48,20 +48,22 @@ export default function ViewForms() {
         }
         setCurrentId(currentId - 1);
         setError(null);
+        
     }
     return (
         <div>
             {
                 
                 (loading ? <div>Loading...</div> : <div>
-                    {error ? <h1>{error}</h1> : null}
+                    {error ? <Alert message={error} type="error"></Alert> : null}
                     <div>{currentForm.error ? currentForm.error : <CandidateForm data = {currentForm}></CandidateForm>}</div>
                     
                 </div>)
                 
             }
+            <Button style={{margin:"10px"}} onClick = {handleBack}>Back</Button>
             <Button style={{margin:"10px"}} onClick = {handleNext}>Next</Button>
-                    <Button style={{margin:"10px"}} onClick = {handleBack}>Back</Button>
+                    
         </div>
     )
 }

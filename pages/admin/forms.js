@@ -7,7 +7,7 @@ export default function Admin() {
 
     return (
         <div>
-            {value.state.user && value.state.user.email == "hemangahujaeotw@gmail.com" ? <ViewForms></ViewForms> : <div>Not Found</div>}
+            {value.state.user && value.state.user.email == "hemang.ahuja2020@vitstudent.ac.in" ? <ViewForms></ViewForms> : <div>Not Found</div>}
         </div>
     )
 }

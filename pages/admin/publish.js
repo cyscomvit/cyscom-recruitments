@@ -3,6 +3,7 @@ import { useContext , useEffect , useState } from 'react'
 import AppContext from '../../context/state'
 import updateFirestore from '../../Firebase/PublishResults'
 import getAllDocs from '../../Firebase/ReadAllUsers'
+import ViewSelected from '../../components/ViewSelected'
 export default function Admin() {
 
     const [docs, setDocs] = useState([])
@@ -21,7 +22,7 @@ export default function Admin() {
     }
     return (
         <div>
-            {loading ? <div>Loading...</div> : value.state.user && value.state.user.email == "hemangahujaeotw@gmail.com" ? <PubResultComp onSubmit = {handlePublish} allEmails={docs}></PubResultComp> : <div>Not Found</div>}
+            {loading ? <div>Loading...</div> : value.state.user && value.state.user.email == "hemang.ahuja2020@vitstudent.ac.in" ? <><PubResultComp onSubmit = {handlePublish} allEmails={docs}></PubResultComp><ViewSelected></ViewSelected></> : <div>Not Found</div>}
         </div>
     )
 }

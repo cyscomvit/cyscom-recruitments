@@ -1,11 +1,17 @@
-import { Form, Input, Button, Space, Select } from 'antd';
+import { Form, Alert, Button, Space, Select } from 'antd';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
 const { Option } = Select;
+import { useState } from 'react';
 const PubResultComp = ({onSubmit , allEmails}) => {
+  const [submitting, setSubmitting] = useState(false);
 
   const onFinish = values => {
     console.log('Received values of form: ', values);
+    setSubmitting(true);
     onSubmit(values.users);
+    setTimeout(() => {
+      setSubmitting(false);
+    }, 3000);
   };
 
   return (
@@ -13,6 +19,7 @@ const PubResultComp = ({onSubmit , allEmails}) => {
       <br></br>
       <br></br>
       <br></br>
+      {submitting ? <Alert message = {"Publishing Results.. Click Refresh to see changes"} type='info'></Alert> : null}
       <h1>Publish Results here</h1>
     <Form name="dynamic_form_nest_item" onFinish={onFinish} autoComplete="off">
       <Form.List name="users">

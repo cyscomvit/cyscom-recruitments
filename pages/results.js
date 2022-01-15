@@ -4,7 +4,7 @@ import Login from '../components/Login';
 import AppContext from '../context/state'
 export default function ResultFunction() {
     const value = useContext(AppContext);
-    
+    value.setPageState("results");
     const handleLogin = (user) => {
         if(user){
         value.setIsLoggedIn(true);
