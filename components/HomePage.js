@@ -6,13 +6,7 @@ import { useContext } from "react";
 import AppContext from "../context/state";
 export default function HomePage() {
   const value = useContext(AppContext);
-  const handleLogin = (user) => {
-    if(user){
-    value.setIsLoggedIn(true);
-    value.setFormState(1);
-    value.setUser(user);
-    }
-  }
+
   const departments = 
     [{name : "Technical", about : "Responsible for vulnaribility project tools and techniques, Solving CTFS, Writing blogs about latest vulnerabilities, etc."},
     {name :"Development" , about : "Responsible for developing and maintaining the website, maintaining the database, etc."},
@@ -20,11 +14,11 @@ export default function HomePage() {
     {name : "Operations" , about : "Responsible for maintaining social media , managing the chapter etc."
 }];
   return (
-    <Layout>
+    <Layout style={{overflow : "hidden" , margin : "1rem"}}>
       <Header style={{height:"6rem",display: "flex" , justifyContent : "space-between"}}>
         <div style={{fontSize : "2rem" , marginTop:"0.6rem"}}>OWASP Recruitments</div>
         {
-          value.state.user ? <div style={{fontSize:"1.5rem" , wordSpacing : "0.6rem" , marginTop : "0.6rem"}}>Welcome {value.state.user.email}</div> : <Login handleLogin={handleLogin}></Login>
+          value.state.user ? <div style={{fontSize:"1.3rem" , wordSpacing : "0.6rem" , marginTop : "0.6rem"}}>Welcome {value.state.user.email}</div> : <Login></Login>
         }
       </Header>
       <Content>
@@ -66,16 +60,24 @@ export default function HomePage() {
         ,
       </Content>
       <div>
-      Interested students can register themselves as mentioned in the following procedure:
-Register with your details and interested department to work under, in the following link:
-*Registration link*
-And join our discord handle for further updates:
-*Discord link*
-Registrations close on : *closing date and time*
+
+ Join our discord handle for further updates:
+        <a href="https://discord.gg/QWQWQWQ">  Link  </a>
+        <br/>
+Registrations close on : 2020-06-30
 
       </div>
-      <Footer>
-        <h1>Footer</h1>
+      <Footer style={{ textAlign: "center" }}>
+        <div>
+          <a href="https://owaspvit.com/">
+            OWASP VIT Student Chapter
+          </a>
+        </div>
+        <div>
+          <a href="https://www.instagram.com/owaspvit/">
+            Instagram
+          </a>
+        </div>
       </Footer>
     </Layout>
   );

@@ -1,4 +1,5 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signInWithRedirect  , getRedirectResult} from "firebase/auth";
+
 import initFirebase from "./Init";
 
 const app = initFirebase();
@@ -9,13 +10,15 @@ const provider = new GoogleAuthProvider();
 
 const signInWithGoogle = async () => {
    try {
-      const result = await signInWithPopup(auth , provider);
-      const user = result.user;
-      console.log(user);
-      return user;
+      signInWithRedirect(auth, provider);
    }
     catch (error) {
       console.log(error);
     }  
 }
-export default signInWithGoogle;
+
+export  {
+   signInWithGoogle,
+   auth,
+   getRedirectResult
+};

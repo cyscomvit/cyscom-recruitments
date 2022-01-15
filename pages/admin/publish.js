@@ -17,6 +17,7 @@ export default function Admin() {
         getData();
     }, [])
     const value = useContext(AppContext)
+    value.setPageState("publish")
     const handlePublish = (data) => {
         updateFirestore(data)
     }

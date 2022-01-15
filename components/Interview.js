@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Alert } from 'antd';
 import readFromFirestore from '../Firebase/ReadUser'
 
 export default function Interview({ user }) {
@@ -11,7 +12,7 @@ export default function Interview({ user }) {
             setLoading(false);
         }
         getInterview();
-    }, []);
+    });
    
     const formatData = (interview) => {
         return `Hello ${interview.personalData.name} Your interview is scheduled at ${interview.personalData.timePreference } on ${interview.personalData.datePreference}`;
@@ -19,7 +20,9 @@ export default function Interview({ user }) {
     
     return (
         <div>
-            {loading ? <div>Loading...</div> : <div>{interview.error ? interview.error : formatData(interview)}</div>}
+            {
+                loading ? <Alert message="Loading..." type="info"></Alert> : interview.error ? <Alert message={interview.error} type="error"></Alert> : <Alert message={formatData(interview)} type="success"></Alert>
+            }
         </div>
     )
 }

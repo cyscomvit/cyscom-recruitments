@@ -17,7 +17,7 @@ export default function ViewForms() {
             setCurrentId(0);
         }
         getIds();
-    }, []);
+    });
     useEffect(() => {
         if(currentId == null){
             return;

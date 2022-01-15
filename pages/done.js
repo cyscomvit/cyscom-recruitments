@@ -9,13 +9,13 @@ import CandidateForm from '../components/CandidateForm'
 export default function Done() {
     const value = useContext(AppContext);
     const router = useRouter();
-    const data = {
+    const data = value.state.user ?  {
         personalData: value.state.personalData,
         departmentData: value.state.departmentData,
         uid : value.state.user.email,
         result : "not_published",
         selectedDepartments : [],
-    }
+    } : {};
     const handleSubmit = async () => {
         console.log(value.state.personalData, value.state.departmentData)
         console.log("here");
