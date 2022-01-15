@@ -1,8 +1,18 @@
 import { Layout } from "antd";
 import { List, Card } from "antd";
 const { Header, Content, Footer } = Layout;
-
+import Login from "./Login";
+import { useContext } from "react";
+import AppContext from "../context/state";
 export default function HomePage() {
+  const value = useContext(AppContext);
+  const handleLogin = (user) => {
+    if(user){
+    value.setIsLoggedIn(true);
+    value.setFormState(1);
+    value.setUser(user);
+    }
+  }
   const departments = 
     [{name : "Technical", about : "Responsible for vulnaribility project tools and techniques, Solving CTFS, Writing blogs about latest vulnerabilities, etc."},
     {name :"Development" , about : "Responsible for developing and maintaining the website, maintaining the database, etc."},
@@ -11,8 +21,11 @@ export default function HomePage() {
 }];
   return (
     <Layout>
-      <Header>
-        <h1>OWASP Recruitments</h1>
+      <Header style={{height:"6rem",display: "flex" , justifyContent : "space-between"}}>
+        <div style={{fontSize : "2rem" , marginTop:"0.6rem"}}>OWASP Recruitments</div>
+        {
+          value.state.user ? <div style={{fontSize:"1.5rem" , wordSpacing : "0.6rem" , marginTop : "0.6rem"}}>Welcome {value.state.user.email}</div> : <Login handleLogin={handleLogin}></Login>
+        }
       </Header>
       <Content>
         <br></br>

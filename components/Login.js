@@ -2,10 +2,26 @@
 import signInWithGoogle from "../Firebase/Auth";
 import { Button } from "antd";
 import {Alert} from "antd";
-import { useState } from "react";
+import { useState , useEffect} from "react";
 const Login = ({handleLogin}) => {
 
     const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const getRedirectResult = async () => {
+            try {
+               const result = await auth.getRedirectResult();
+               const user = result.user;
+               console.log(user);
+               return user;
+            }
+               catch (error) {
+                  console.log(error);
+               }
+         }
+            getRedirectResult();
+        }, []);
+        
     const handleGoogleSignIn = async () => {
         const user = await signInWithGoogle();
         if(user){

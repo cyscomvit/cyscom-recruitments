@@ -9,6 +9,11 @@ export default function FormSteps() {
             <Steps
                 current={value.state.formState}
                 size="small"
+                style={{
+                    margin : "3rem",
+                    width : "50%",
+                    
+                }}
             >
                 <Step title="Sign in"/>
                 <Step title="Personal Data" />
