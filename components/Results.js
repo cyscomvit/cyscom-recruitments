@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import readFromFirestore from '../Firebase/ReadUser'
 import { Alert } from 'antd';
+import CandidateForm from './CandidateForm';
 export default function Results({ user }) {
     const [result, setResult] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -10,8 +11,9 @@ export default function Results({ user }) {
             setResult(resultDoc);
             setLoading(false);
         }
+        console.log(user);
         getResult();
-    });
+    },[]);
    
     const formatData = (resultDoc) => {
         if(resultDoc.result == "not_published"){
@@ -30,7 +32,11 @@ export default function Results({ user }) {
          return (
             <div>
                 {
-                    loading ? <Alert message="Loading..." type="info"></Alert> : result.error ? <Alert message={result.error} type="error"></Alert> : <Alert message={formatData(result)} type="success"></Alert>
+                    loading ? <Alert message="Loading..." type="info"></Alert> : result.error ? <Alert message={result.error} type="error"></Alert> :
+                    <> 
+                    <Alert message={formatData(result)} type="success"></Alert> 
+                    <CandidateForm data={result}></CandidateForm>
+                    </>
                 }
             </div>
         )

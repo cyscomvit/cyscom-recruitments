@@ -22,6 +22,9 @@ const Login = () => {
                const result = await getRedirectResult(auth);
                const user = result.user;
                if(user){
+                   if(value.state.user){
+                       return;
+                   }
                    if(user.email.includes("@vitstudent.ac.in")){
                      handleLogin(user);
                      setError(null);
@@ -42,7 +45,7 @@ const Login = () => {
     return (
         <div>
             {error && <Alert type = "info" message = {error}></Alert>}
-            <Button style={{margin: "1%"}} onClick={signInWithGoogle}>Sign in with Google</Button>
+            {error!="Fetching User" && <Button style={{margin: "1%"}} onClick={signInWithGoogle}>Sign in with Google</Button>}
         </div>
     );
 }
