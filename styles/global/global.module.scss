@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+.nav {
+    background: transparent;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    height: 80px;
+    border-bottom: none;
+    display: block;
+    background-color: rgb(230, 230, 230);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.logo {
+    display: inline;
+    width: fit-content;
+    @media screen and (max-width: 768px) {
+        margin: 0 auto;
+        display: block;
+    }
+}
+.navOptions {
+    float: right;
+    margin-right: 3rem;
+    display: inline;
+    list-style-type: none;
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+.navItem {
+    display: inline;
+    margin-right: 2rem;
+    font-size: 1.2rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+.link {
+    color: rgb(36, 36, 36);
+    &:hover {
+        color: rgb(110, 110, 110);
+    }
+}
+.burger {
+    color:rgb(36, 36, 36);
+    font-size: 1.3rem;
+    width: fit-content;
+    display: none;
+    cursor: pointer;
+    @media screen and (max-width: 768px) {
+        position: absolute;
+        display: block;
+        top: 20px;
+        right: 20px;
+        z-index: 200;
+    }
+}
+.sidebarOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500vh;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.692);
+}
+.sidebar {
+    height: 100vh;
+    width: 320px;
+    background-color: rgb(236, 236, 236);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: all 0.2s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    animation: slide-in-left 0.2s ease-in-out;
+    border-color: transparent;
+}
+@keyframes slide-in-left {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.closeIcon {
+    position: absolute;
+    right: 10px;
+    color: #000;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.sidebarColumn {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    color: #000;
+} 
+.sidebarRow {
+    background-color: rgb(206, 206, 206);
+    padding: 5px 5px;
+    font-size: 1.3rem;
+}
+.footer {
+    width: 100%;
+    background-color: rgb(12, 15, 48);
+    color: rgb(167, 167, 167);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 10px;
+    position: relative;
+    font-family: Oswald;
+    p {
+        margin-bottom: 0px;
+    }
+}
+.smContainer {
+    display: flex;
+    flex-direction: row;
+}
+.footerLink {
+    margin: 0px 10px;
+    display: inline;
+}
+.admin {
+    position: absolute;
+    font-size: 10px;
+    font-family: Nunito;
+    right: 10px;
+    bottom: 5px;
+}

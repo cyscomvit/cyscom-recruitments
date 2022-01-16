@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+.homeWrapper {
+    background-image: url("../../static/bg.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Nunito;
+    scroll-behavior: smooth;
+}
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.heading {
+    font-size: clamp(2.3rem, 5vw, 5rem);
+    font-family: Oswald;
+    font-weight: 900;
+    margin-bottom: 0em;
+    margin-top: 100px;
+    @media screen and (max-width: 768px) {
+        margin-top: 0px;
+        
+    }
+}
+.subheading{
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-family: Oswald;
+    font-style: italic;
+    margin-bottom: 0em;
+    color: rgb(255, 255, 255);
+}
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+.button1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(91, 101, 243);
+    // color: rgb(37, 37, 37);
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 30px;
+    font-size: 1.8rem;
+    margin: 0px 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 0.2s all ease;
+    cursor: pointer;
+    &:hover {
+        background-color: rgb(61, 68, 163);
+    }
+}
+.button2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 255, 98);
+    color: rgb(24, 24, 24);
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 1.8rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 0.2s all ease;
+    cursor: pointer;
+    &:hover {
+        background-color: rgb(1, 182, 70);
+    }
+}
+.button1, .button2 {
+    @media screen and (max-width: 768px) {
+        font-size: 1.2rem;
+    }
+}
+.info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(137,0,200);
+    background: radial-gradient(circle, rgba(137,0,200,1) 0%, rgba(50,4,136,1) 71%);
+    scroll-behavior: smooth;
+}
+.infoH1 {
+    margin-top: 20px;
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-family: Oswald;
+}
+.infoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    @media screen and (max-width: 1376px) {
+        flex-direction: column;
+        
+    }
+}
+.infoCard {
+    width: 300px;
+    height: 300px;
+    border-color: rgb(0, 206, 45);
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 5px 10px;
+    @media screen and (max-width: 1376px) {
+        margin: 10px 0px;
+        
+    }
+    transition: 0.2s all ease;
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 30px;
+    }
+}
+.infoIcon {
+    font-size: 5rem;
+    text-align: center;
+    font-family: Nunito;
+}
+.infoText {
+    font-family: Nunito;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+.departments {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color : #D4C2FC;
+    scroll-behavior: smooth;
+    color: rgb(27, 27, 27);
+}
+.departmentsH1 {
+    margin-top: 20px;
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-family: Oswald;
+    color: rgb(27, 27, 27);
+    margin-bottom: 0em;
+    text-align: center;
+}
+.departmentsSub {
+    font-family: Nunito;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    @media screen and (max-width: 1280px) {
+        width: 90%;   
+    }
+}
+.departmentsContainer {
+    width: 40%;
+    margin: 10px auto;
+    @media screen and (max-width: 1280px) {
+        width: 90%;   
+    }
+}
+.dept:first-child {
+    border-left:rgb(61, 68, 163) solid 5px;
+}
+.dept:nth-child(2){
+    border-left:rgb(245, 49, 0) solid 5px;
+}
+.dept:nth-child(3){
+    border-left:rgb(0, 153, 0) solid 5px;
+}
+.dept:nth-child(4){
+    border-left:rgb(151, 0, 76) solid 5px;
+}
+.dept {
+    padding-left: 20px;
+    h3 {
+        font-family: Oswald;
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 0em;
+        color: rgb(27, 27, 27);
+    }
+    p {
+        color: rgb(29, 29, 29);
+        font-family: Nunito;
+        font-size: 1.3rem;
+    }
+}
+.howto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color : #D4C2FC;
+    scroll-behavior: smooth;
+    color: rgb(27, 27, 27);
+    h1 {
+        font-family: Oswald;
+        font-size: clamp(3rem, 5vw, 5rem);
+        font-weight: 400;
+        margin-bottom: 0em;
+        color: rgb(27, 27, 27);
+        text-align: center;
+    }
+    ol {
+        width: 40%;
+        margin: 20px auto;
+        font-size: 1.5rem;
+        font-family: Nunito;
+        @media screen and (max-width: 1280px) {
+            width: 80%;   
+        }
+    }
+
+}
+.footer {
+    width: 100%;
+    background-color: rgb(12, 15, 48);
+    color: rgb(167, 167, 167);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 10px;
+    position: relative;
+    font-family: Oswald;
+    p {
+        margin-bottom: 0px;
+    }
+}
+.smContainer {
+    display: flex;
+    flex-direction: row;
+}
+.footerLink {
+    margin: 0px 10px;
+    display: inline;
+}
+.admin {
+    position: absolute;
+    font-size: 10px;
+    font-family: Nunito;
+    right: 10px;
+    bottom: 5px;
+}

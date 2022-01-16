@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+.homeWrapper {
+  background-image: url("../../static/bg.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Nunito;
+  scroll-behavior: smooth;
+}
+
+.homeContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.heading {
+  font-size: clamp(2.3rem, 5vw, 5rem);
+  font-family: Oswald;
+  font-weight: 900;
+  margin-bottom: 0em;
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    margin-top: 0px;
+  }
+}
+
+.subheading {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-family: Oswald;
+  font-style: italic;
+  margin-bottom: 0em;
+  color: white;
+}
+
+.buttonWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.button1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #5b65f3;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 30px;
+  font-size: 1.8rem;
+  margin: 0px 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+  cursor: pointer;
+}
+
+.button1:hover {
+  background-color: #3d44a3;
+}
+
+.button2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #00ff62;
+  color: #181818;
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-size: 1.8rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+  cursor: pointer;
+}
+
+.button2:hover {
+  background-color: #01b646;
+}
+
+@media screen and (max-width: 768px) {
+  .button1, .button2 {
+    font-size: 1.2rem;
+  }
+}
+
+.info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #8900c8;
+  background: radial-gradient(circle, #8900c8 0%, #320488 71%);
+  scroll-behavior: smooth;
+}
+
+.infoH1 {
+  margin-top: 20px;
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-family: Oswald;
+}
+
+.infoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1376px) {
+  .infoContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.infoCard {
+  width: 300px;
+  height: 300px;
+  border-color: #00ce2d;
+  margin: 0px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 5px 10px;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+}
+
+@media screen and (max-width: 1376px) {
+  .infoCard {
+    margin: 10px 0px;
+  }
+}
+
+.infoCard:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 30px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 30px;
+}
+
+.infoIcon {
+  font-size: 5rem;
+  text-align: center;
+  font-family: Nunito;
+}
+
+.infoText {
+  font-family: Nunito;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.3rem;
+}
+
+.departments {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #D4C2FC;
+  scroll-behavior: smooth;
+  color: #1b1b1b;
+}
+
+.departmentsH1 {
+  margin-top: 20px;
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-family: Oswald;
+  color: #1b1b1b;
+  margin-bottom: 0em;
+  text-align: center;
+}
+
+.departmentsSub {
+  font-family: Nunito;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+
+@media screen and (max-width: 1280px) {
+  .departmentsSub {
+    width: 90%;
+  }
+}
+
+.departmentsContainer {
+  width: 40%;
+  margin: 10px auto;
+}
+
+@media screen and (max-width: 1280px) {
+  .departmentsContainer {
+    width: 90%;
+  }
+}
+
+.dept:first-child {
+  border-left: #3d44a3 solid 5px;
+}
+
+.dept:nth-child(2) {
+  border-left: #f53100 solid 5px;
+}
+
+.dept:nth-child(3) {
+  border-left: #009900 solid 5px;
+}
+
+.dept:nth-child(4) {
+  border-left: #97004c solid 5px;
+}
+
+.dept {
+  padding-left: 20px;
+}
+
+.dept h3 {
+  font-family: Oswald;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0em;
+  color: #1b1b1b;
+}
+
+.dept p {
+  color: #1d1d1d;
+  font-family: Nunito;
+  font-size: 1.3rem;
+}
+
+.howto {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #D4C2FC;
+  scroll-behavior: smooth;
+  color: #1b1b1b;
+}
+
+.howto h1 {
+  font-family: Oswald;
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 400;
+  margin-bottom: 0em;
+  color: #1b1b1b;
+  text-align: center;
+}
+
+.howto ol {
+  width: 40%;
+  margin: 20px auto;
+  font-size: 1.5rem;
+  font-family: Nunito;
+}
+
+@media screen and (max-width: 1280px) {
+  .howto ol {
+    width: 80%;
+  }
+}
+
+.footer {
+  width: 100%;
+  background-color: #0c0f30;
+  color: #a7a7a7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 10px;
+  position: relative;
+  font-family: Oswald;
+}
+
+.footer p {
+  margin-bottom: 0px;
+}
+
+.smContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.footerLink {
+  margin: 0px 10px;
+  display: inline;
+}
+
+.admin {
+  position: absolute;
+  font-size: 10px;
+  font-family: Nunito;
+  right: 10px;
+  bottom: 5px;
+}
+/*# sourceMappingURL=home.module.css.map */

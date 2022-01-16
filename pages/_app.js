@@ -3,6 +3,8 @@ import { useState } from 'react';
 import AppContext from '../context/state';
 import Navigation from '../components/Navigation';
 import initFirebase from '../Firebase/Init';
+import "../styles/clear.css";
+import Footer from '../components/Footer';
 function MyApp({ Component, pageProps }) {
 
   const [user, setUser] = useState(null);
@@ -33,6 +35,7 @@ function MyApp({ Component, pageProps }) {
     >
       <Navigation isAdmin={user && user.email == "hemang.ahuja2020@vitstudent.ac.in"}></Navigation>
       <Component {...pageProps} />
+      <Footer />
     </AppContext.Provider>
   );
 }
