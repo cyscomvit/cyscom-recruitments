@@ -9,6 +9,7 @@ export default function Admin() {
     const [docs, setDocs] = useState([])
     const [loading, setLoading] = useState(true)
     useEffect(() => {
+        value.setPageState("publish")
         const getData = async () => {
             const Myids = await getAllDocs();
             setDocs(Myids);
@@ -17,7 +18,7 @@ export default function Admin() {
         getData();
     }, [])
     const value = useContext(AppContext)
-    value.setPageState("publish")
+    
     const handlePublish = (data) => {
         updateFirestore(data)
     }

@@ -20,11 +20,11 @@ export default function Done() {
         console.log(value.state.personalData, value.state.departmentData)
         console.log("here");
         await addToFireStore(data);
-        value.setFormState(0);
+        value.setFormState(1);
         value.setPersonalData({});
         value.setDepartmentData({});
-        value.setPageState('home');
         router.replace('/');
+        value.setPageState('home');
     }
 
     return (

@@ -2,7 +2,8 @@ import { useState , useEffect } from "react"
 import getAllDocs from "../Firebase/ReadAllUsers";
 import readFromFirestore from "../Firebase/ReadUser";
 import CandidateForm from "./CandidateForm";
-import { Button , Alert} from "antd";
+import { Button , Alert , Select} from "antd";
+const { Option } = Select;
 export default function ViewForms() {
     const [ids, setIds] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -61,6 +62,15 @@ export default function ViewForms() {
                 </div>)
                 
             }
+            <Select placeholder="Search for form" showSearch defaultValue={ids[currentId]} style={{ width: "20rem" }} onChange={(value) => { 
+                setCurrentId(ids.indexOf(value));
+                
+                setError(null);
+            }}>
+                {ids.map((id , index) => {
+                    return <Option key = {index} value={id}>{id}</Option>
+                })}
+            </Select>
             <Button style={{margin:"10px"}} onClick = {handleBack}>Back</Button>
             <Button style={{margin:"10px"}} onClick = {handleNext}>Next</Button>
                     

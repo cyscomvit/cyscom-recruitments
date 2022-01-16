@@ -6,7 +6,9 @@ import AppContext from '../context/state'
 export default function ResultFunction() {
     
     const value = useContext(AppContext);
-    value.setPageState("results");
+    useEffect(() => {
+        value.setPageState('results');
+    }, [])
    
 
     return (
