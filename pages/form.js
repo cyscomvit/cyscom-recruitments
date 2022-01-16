@@ -1,11 +1,13 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import Router from "next/router";
 import AppContext from "../context/state";
 import Login from "../components/Login";
 import FormSteps from "../components/Steps";
 export default function Form() {
     const value = useContext(AppContext);
-    value.setPageState("form");
+    useEffect(() => {
+        value.setPageState("form");
+    }, []);
 
  
   const componenetToRender = () => {

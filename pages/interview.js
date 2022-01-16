@@ -1,11 +1,13 @@
-import { useContext  } from 'react'
+import { useContext, useEffect  } from 'react'
 import Interview from '../components/Interview'
 import Login from '../components/Login';
 import AppContext from '../context/state'
 
 export default function InterviewFunction() {
     const value = useContext(AppContext);
-    value.setPageState("interview");
+    useEffect(() => {
+        value.setPageState('interview');
+    }, [])
    
 
     return (

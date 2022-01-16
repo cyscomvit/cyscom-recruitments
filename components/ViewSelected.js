@@ -18,9 +18,9 @@ export default function ViewSelected() {
           dataIndex: 'selectedDepartments',
           render: departmentsSelected => (
             <>
-              {departmentsSelected.map(tag => {
+              {departmentsSelected.map((tag,index) => {
                 return (
-                  <Tag key={tag}>
+                  <Tag key={index}>
                     {tag.toUpperCase()}
                   </Tag>
                 );

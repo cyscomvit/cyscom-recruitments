@@ -17,6 +17,7 @@ const PersonalForm = ({handleSubmit}) => {
     //form for name, personal email , vit email , phone number, college year,course,registeration number,slot preference
     return (
         <Form
+            form={form}
             {...layout}
             name="dynamic_form_nest_item"
             onFinish={handleSubmit}

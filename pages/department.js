@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import DepartmentForm from '../components/DepartmentForm';
 import { useContext } from 'react';
 import AppContext from '../context/state';
@@ -6,7 +6,9 @@ import Router from 'next/router';
 import FormSteps from '../components/Steps'
 export default function Department() {
     const value = useContext(AppContext);
-    value.setPageState("department");
+    useEffect(() => {
+        value.setPageState("department");
+    }, [])
     const handleDepartmentSubmit = (values) => {
         value.setDepartmentData(values);
         value.setFormState(3);
