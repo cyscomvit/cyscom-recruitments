@@ -39,11 +39,7 @@ const Login = () => {
             }
          }
             catchLogin();
-            return () => {
-                setError("Please login with your VIT email");
-            }
-        });
-
+        }, []);
  
     return (
         <div >

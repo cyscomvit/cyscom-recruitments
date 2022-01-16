@@ -27,7 +27,7 @@ export default function Interview({ user }) {
             {
                 loading ? <Alert className={styles.alert} message="Loading..." type="info"></Alert> : interview.error ? <Alert className={styles.alert} message={interview.error} type="error"></Alert> : 
                 <>
-                <Alert className={styles.alert}  message={formatData(interview)} type="info"></Alert>
+                <h1 className={styles.alert}>{formatData(interview)}</h1>
                 <CandidateForm data={interview}></CandidateForm>
                 </>
             }

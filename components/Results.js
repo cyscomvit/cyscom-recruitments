@@ -35,7 +35,7 @@ export default function Results({ user }) {
                 {
                     loading ? <Alert className={styles.alert} message="Loading..." type="info"></Alert> : result.error ? <Alert className={styles.alert} message={result.error} type="error"></Alert> :
                     <> 
-                    <Alert className={styles.alert} message={formatData(result)} type="info"></Alert> 
+                    <h1 className={styles.alert}>{formatData(result)}</h1>
                     <CandidateForm data={result}></CandidateForm>
                     </>
                 }

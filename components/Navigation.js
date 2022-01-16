@@ -26,7 +26,7 @@ export default function Navigation({ isAdmin }) {
       <Menu onClick={handleClick} selectedKeys={[value.state.pageState]} mode="horizontal" className={styles.nav}>
         <Script src="https://kit.fontawesome.com/fc236c3dc0.js" crossorigin="anonymous" />
         <div className={styles.logo}>
-          <a href="https://owaspvit.com" target="_blank"><Image src={logo} width={60} height={60} alt="logo" /></a>
+          <a href="https://owaspvit.com" target="_blank" rel="noreferrer"><Image src={logo} width={60} height={60} alt="logo" /></a>
         </div>
         <ul className={styles.navOptions}>
           {/* <Menu.Item key="home" icon={<HomeFilled></HomeFilled>}>
@@ -61,9 +61,16 @@ export default function Navigation({ isAdmin }) {
               <i className="fas fa-times" onClick={() => setOpen(false)}></i>
             </div>
             <div className={styles.sidebarColumn}>
-              <div className={styles.sidebarRow}>Home</div>
-              <div className={styles.sidebarRow}>Register</div>
-              <div className={styles.sidebarRow}>Interview</div>
+              <Link href='/'><a style={{color : "black"}} className={styles.link}>Home</a></Link>
+              <Link href='/form'><a style={{color : "black"}} className={styles.link}>Register</a></Link>
+              <Link href='/interview'><a style={{color : "black"}} className={styles.link}>Interview</a></Link>
+              <Link href='/results'><a style={{color : "black"}} className={styles.link}>Results</a></Link>
+              {isAdmin &&
+              <>
+              <Link href='/admin/forms'><a style={{color : "black"}} className={styles.link}>Review Forms</a></Link>
+              <Link href='/admin/publish'><a style={{color : "black"}} className={styles.link}>Publish Results</a></Link>
+              </>
+              }
             </div>
           </div>
         </div>

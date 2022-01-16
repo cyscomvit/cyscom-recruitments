@@ -57,10 +57,14 @@ const PersonalForm = ({handleSubmit}) => {
                 label="College Year"
                 rules={[{ required: true, message: 'Please input your college year!' }]}
             >
-                <Select>
+                <Select >
 
-                    <Select.Option value="2">2</Select.Option>
-                    <Select.Option value="3">3</Select.Option>
+                    <Select.Option style={{
+                    background : "#28126C"
+                }} value="2">2</Select.Option>
+                    <Select.Option style={{
+                    background : "#28126C"
+                }} value="3">3</Select.Option>
                   
                 </Select>
             </Form.Item>
@@ -84,9 +88,15 @@ const PersonalForm = ({handleSubmit}) => {
                 rules={[{ required: true, message: 'Please input your date preference!' }]}
             >
                 <Select>
-                    <Select.Option value="1">1</Select.Option>
-                    <Select.Option value="2">2</Select.Option>
-                    <Select.Option value="3">3</Select.Option>
+                    <Select.Option style={{
+                    background : "#28126C"
+                }} value="1">1</Select.Option>
+                    <Select.Option style={{
+                    background : "#28126C"
+                }} value="2">2</Select.Option>
+                    <Select.Option  style={{
+                    background : "#28126C"
+                }}value="3">3</Select.Option>
                 </Select>
             </Form.Item>
             <Form.Item
@@ -95,9 +105,15 @@ const PersonalForm = ({handleSubmit}) => {
                 rules={[{ required: true, message: 'Please input your time preference!' }]}
             >
                 <Select>
-                    <Select.Option value="1">1</Select.Option>
-                    <Select.Option value="2">2</Select.Option>
-                    <Select.Option value="3">3</Select.Option>
+                    <Select.Option style={{
+                    background : "#28126C"
+                }} value="1">1</Select.Option>
+                    <Select.Option  style={{
+                    background : "#28126C"
+                }}value="2">2</Select.Option>
+                    <Select.Option style={{
+                    background : "#28126C"
+                }} value="3">3</Select.Option>
                 </Select>
             </Form.Item>
             <Form.Item>
