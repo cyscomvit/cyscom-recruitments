@@ -23,7 +23,7 @@ export default function Admin() {
         updateFirestore(data)
     }
     return (
-        <div>
+        <div style={{backgroundImage: "url(/_next/static/media/bg.75d2108d.jpg)"}}>
             {loading ? <div>Loading...</div> : value.state.user && value.state.user.email == "hemang.ahuja2020@vitstudent.ac.in" ? <><PubResultComp onSubmit = {handlePublish} allEmails={docs}></PubResultComp><ViewSelected></ViewSelected></> : <div>Not Found</div>}
         </div>
     )

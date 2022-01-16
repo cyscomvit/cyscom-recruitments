@@ -10,7 +10,11 @@ export default function FormSteps() {
                 current={value.state.formState}
                 size="small"
                 style={{
-                    margin : "3rem",
+                    marginTop: "4rem",
+                    paddingTop : "7rem",
+                    paddingTop : "2rem",
+                    marginLeft : "2rem",
+                    marginBottom : "2rem",
                     width : "50%",
                     
                 }}

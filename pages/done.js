@@ -23,12 +23,12 @@ export default function Done() {
         value.setFormState(1);
         value.setPersonalData({});
         value.setDepartmentData({});
-        router.replace('/');
+        router.replace('/interview');
         value.setPageState('home');
     }
 
     return (
-        <div>
+        <div style={{backgroundImage: "url(/_next/static/media/bg.75d2108d.jpg)" , paddingTop: "5rem" }}>
              <FormSteps></FormSteps>
        {value.state.isLoggedIn ? <><CandidateForm data = {data}></CandidateForm><Button style={{margin:"5rem" , width:"10rem"}} onClick={handleSubmit}>Submit</Button></> : <div>Please Login</div>}
         </div>

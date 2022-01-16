@@ -46,7 +46,7 @@ const Login = () => {
 
  
     return (
-        <div>
+        <div >
             {error && <Alert type = "info" message = {error}></Alert>}
             {error!="Fetching User" && <Button style={{margin: "1%"}} onClick={signInWithGoogle}>Sign in with Google</Button>}
         </div>

@@ -52,7 +52,7 @@ export default function ViewForms() {
         
     }
     return (
-        <div>
+        <div style={{paddingTop:"5rem"}}>
             {
                 
                 (loading ? <div>Loading...</div> : <div>

@@ -8,7 +8,7 @@ export default function Admin() {
          value.setPageState('review')
     }, [])
     return (
-        <div>
+        <div style={{backgroundImage: "url(/_next/static/media/bg.75d2108d.jpg)"}}>
             {value.state.user && value.state.user.email == "hemang.ahuja2020@vitstudent.ac.in" ? <ViewForms></ViewForms> : <div>Not Found</div>}
         </div>
     )

@@ -44,24 +44,21 @@ export default function Navigation({ isAdmin }) {
           <li className={styles.navItem}><Link href='/' style={{ color: '#fff' }}><a className={styles.link}>Home</a></Link></li>
           <li className={styles.navItem}><Link href='/form' style={{ color: '#fff' }}><a className={styles.link}>Register</a></Link></li>
           <li className={styles.navItem}><Link href='/interview' style={{ color: '#fff' }}><a className={styles.link}>Interview</a></Link></li>
-        </ul>
-        <div className={styles.burger}><i class="fas fa-bars" onClick={() => setOpen(true)}></i></div>
-        {isAdmin ?
+          <li className={styles.navItem}><Link href='/results' style={{ color: '#fff' }}><a className={styles.link}>Results</a></Link></li>
+          {isAdmin && 
           <>
-            <Menu.Item key="review" icon={<FormOutlined></FormOutlined>}>
-              <Link href="/admin/forms">Review Forms</Link>
-            </Menu.Item>
-            <Menu.Item key="publish" icon={<CheckCircleOutlined></CheckCircleOutlined>}>
-              <Link href="/admin/publish">Publish Results</Link>
-            </Menu.Item>
+          <li className={styles.navItem}><Link href='/admin/forms' style={{ color: '#fff' }}><a className={styles.link}>Review Forms</a></Link></li>
+          <li className={styles.navItem}><Link href='/admin/publish' style={{ color: '#fff' }}><a className={styles.link}>Publish Results</a></Link></li>
           </>
-          : null}
+          }
+        </ul>
+        <div className={styles.burger}><i className="fas fa-bars" onClick={() => setOpen(true)}></i></div>
       </Menu>
       {open &&
         <div className={styles.sidebarOverlay}>
           <div className={styles.sidebar}>
             <div className={styles.closeIcon}>
-              <i class="fas fa-times" onClick={() => setOpen(false)}></i>
+              <i className="fas fa-times" onClick={() => setOpen(false)}></i>
             </div>
             <div className={styles.sidebarColumn}>
               <div className={styles.sidebarRow}>Home</div>

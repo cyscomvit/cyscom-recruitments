@@ -61,26 +61,26 @@ export default function HomePage() {
         <div className={styles.infoContainer}>
           <div className={styles.infoCard}>
             <div className={styles.infoCardImage}>
-              <div className={styles.infoIcon}><i class="fas fa-users"></i></div>
+              <div className={styles.infoIcon}><i className="fas fa-users"></i></div>
               <p className={styles.infoText}>Get to be a part of the biggest and VITCC's only Cyber Security Student
                 Chapter!</p>
             </div>
           </div>
           <div className={styles.infoCard}>
             <div className={styles.infoCardImage}>
-              <div className={styles.infoIcon}><i class="fas fa-project-diagram"></i></div>
+              <div className={styles.infoIcon}><i className="fas fa-project-diagram"></i></div>
               <p className={styles.infoText}>Work on real time projects, learn effective collaboration and how to organize events!</p>
             </div>
           </div>
           <div className={styles.infoCard}>
             <div className={styles.infoCardImage}>
-              <div className={styles.infoIcon}><i class="fas fa-laptop-code"></i></div>
+              <div className={styles.infoIcon}><i className="fas fa-laptop-code"></i></div>
               <p className={styles.infoText}>Learn new and exciting technologies and tech stacks through webinars, online sessions and more!</p>
             </div>
           </div>
           <div className={styles.infoCard}>
             <div className={styles.infoCardImage}>
-              <div className={styles.infoIcon}><i class="fas fa-bug"></i></div>
+              <div className={styles.infoIcon}><i className="fas fa-bug"></i></div>
               <p className={styles.infoText}>Dive into the evolving world of cyber-security and learn about the best security practices!</p>
             </div>
           </div>
@@ -98,9 +98,9 @@ export default function HomePage() {
       </section>
 
       {/* <Header style={{ height: "6rem", display: "flex", justifyContent: "space-between" }}>
-        <div style={{ fontSize: "2rem", marginTop: "0.6rem" }}>OWASP Recruitments</div>
+        <div style={{ fontSize: "2rem", paddingTop: "0.6rem" }}>OWASP Recruitments</div>
         {
-          value.state.user ? <div style={{ fontSize: "1.3rem", wordSpacing: "0.6rem", marginTop: "0.6rem" }}>Welcome {value.state.user.email}</div> : <Login></Login>
+          value.state.user ? <div style={{ fontSize: "1.3rem", wordSpacing: "0.6rem", paddingTop: "0.6rem" }}>Welcome {value.state.user.email}</div> : <Login></Login>
         }
       </Header> */}
       {/* <Content>

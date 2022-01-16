@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
 .nav {
   background: transparent;
   padding: 1rem;
@@ -10,7 +11,7 @@
   height: 80px;
   border-bottom: none;
   display: block;
-  background-color: #e6e6e6;
+  background-color: rgba(0, 0, 0, 0.35);
   -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -54,7 +55,7 @@
 }
 
 .link {
-  color: #242424;
+  color: whitesmoke;
 }
 
 .link:hover {
@@ -203,5 +204,10 @@
   font-family: Nunito;
   right: 10px;
   bottom: 5px;
+}
+.alert{
+  margin-top:1rem;
+  margin-bottom: 1rem;
+  font-size:2.5rem
 }
 /*# sourceMappingURL=global.module.css.map */

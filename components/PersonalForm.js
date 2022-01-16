@@ -12,12 +12,14 @@ const PersonalForm = ({handleSubmit}) => {
     const layout = {
         labelCol: { span: 4 },
         wrapperCol: { span: 8 },
+
       };
     const [form] = Form.useForm(); 
     //form for name, personal email , vit email , phone number, college year,course,registeration number,slot preference
     return (
         <Form
             form={form}
+            style={{paddingTop: '3rem'}}
             {...layout}
             name="dynamic_form_nest_item"
             onFinish={handleSubmit}

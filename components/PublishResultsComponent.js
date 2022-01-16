@@ -15,10 +15,7 @@ const PubResultComp = ({onSubmit , allEmails}) => {
   };
 
   return (
-      <>
-      <br></br>
-      <br></br>
-      <br></br>
+      <div style={{paddingTop:"5rem"}}>
       {submitting ? <Alert message = {"Publishing Results.. Click Refresh to see changes"} type='info'></Alert> : null}
       <h1>Publish Results here</h1>
     <Form name="dynamic_form_nest_item" onFinish={onFinish} autoComplete="off">
@@ -67,7 +64,7 @@ const PubResultComp = ({onSubmit , allEmails}) => {
         </Button>
       </Form.Item>
     </Form>
-    </>
+    </div>
   );
 };
 

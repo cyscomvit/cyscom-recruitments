@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Alert } from 'antd';
 import CandidateForm from './CandidateForm';
+import styles from "../styles/global/global.module.css";
 import readFromFirestore from '../Firebase/ReadUser'
 
 export default function Interview({ user }) {
@@ -22,10 +23,11 @@ export default function Interview({ user }) {
     
     return (
         <div>
+            
             {
-                loading ? <Alert message="Loading..." type="info"></Alert> : interview.error ? <Alert message={interview.error} type="error"></Alert> : 
+                loading ? <Alert className={styles.alert} message="Loading..." type="info"></Alert> : interview.error ? <Alert className={styles.alert} message={interview.error} type="error"></Alert> : 
                 <>
-                <Alert message={formatData(interview)} type="success"></Alert>
+                <Alert className={styles.alert}  message={formatData(interview)} type="info"></Alert>
                 <CandidateForm data={interview}></CandidateForm>
                 </>
             }

@@ -8,7 +8,8 @@ const app = initFirebase();
 const db = getFirestore(app);
 
 const updateFirestore = async (selectedPeople) => {
-    
+    try{
+            
     const querySnapshot = await getDocs(collection(db,"users"));
 
     for(let docIter of querySnapshot.docs){
@@ -28,6 +29,10 @@ const updateFirestore = async (selectedPeople) => {
             });
         }
 
+    }
+    }
+    catch(error){
+        console.log(error);
     }
 }
 

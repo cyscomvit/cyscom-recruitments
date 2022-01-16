@@ -26,7 +26,7 @@ export default function Form() {
   }
   return (
     
-      <div>
+      <div style={{backgroundImage: "url(/_next/static/media/bg.75d2108d.jpg)" , paddingTop: "5rem" }}>
             <FormSteps></FormSteps>
             {componenetToRender()}
       </div>

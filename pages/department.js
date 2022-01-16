@@ -15,7 +15,7 @@ export default function Department() {
         Router.push('/done');
     }
     return (
-        <div>
+        <div style={{backgroundImage: "url(/_next/static/media/bg.75d2108d.jpg)" , paddingTop: "5rem" }}>
              <FormSteps></FormSteps>
             {
                 value.state.isLoggedIn ?

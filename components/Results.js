@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import readFromFirestore from '../Firebase/ReadUser'
 import { Alert } from 'antd';
 import CandidateForm from './CandidateForm';
+import styles from "../styles/global/global.module.css";
 export default function Results({ user }) {
     const [result, setResult] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -32,9 +33,9 @@ export default function Results({ user }) {
          return (
             <div>
                 {
-                    loading ? <Alert message="Loading..." type="info"></Alert> : result.error ? <Alert message={result.error} type="error"></Alert> :
+                    loading ? <Alert className={styles.alert} message="Loading..." type="info"></Alert> : result.error ? <Alert className={styles.alert} message={result.error} type="error"></Alert> :
                     <> 
-                    <Alert message={formatData(result)} type="success"></Alert> 
+                    <Alert className={styles.alert} message={formatData(result)} type="info"></Alert> 
                     <CandidateForm data={result}></CandidateForm>
                     </>
                 }

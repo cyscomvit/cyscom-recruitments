@@ -11,8 +11,13 @@ export default function InterviewFunction() {
    
 
     return (
-        value.state.user ? <>
+        <div style={{backgroundImage: "url(/_next/static/media/bg.75d2108d.jpg)"}}>
+        <h1 style={{paddingTop:"5rem" , fontSize:"clamp(2.3rem,5vw,5rem)",fontFamily:"Oswald",fontWeight:"900"}}>Interview Details</h1>
+
+        {value.state.user ? <>
+        
         <Interview user={value.state.user}></Interview>
-        </> : <Login></Login>
+        </> : <Login></Login>}
+        </div>
     )
 }
