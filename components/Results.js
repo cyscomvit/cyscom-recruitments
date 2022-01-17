@@ -18,13 +18,13 @@ export default function Results({ user }) {
    
     const formatData = (resultDoc) => {
         if(resultDoc.result == "not_published"){
-            return `Hello ${result.personalData.name} Results are not published yet`;
+            return `Results have not been published yet`;
         }
         else if(resultDoc.result == "selected"){
-            return `Hello ${result.personalData.name} You are selected for ${result.selectedDepartments.join(', ')} department(s)`;
+            return `Congratulations ${result.personalData.name}! You have been selected for the ${result.selectedDepartments.join(', ')} department(s)`;
         }
         else if(resultDoc.result == "rejected"){
-            return `Hello ${result.personalData.name} You are not selected this time but you can try next time :)`;
+            return "We regret to inform you that you have not been selected this time. But that doesn't mean you can't be selected next time. Keep trying!";
         }
     }
     

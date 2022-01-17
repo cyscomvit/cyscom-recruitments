@@ -91,9 +91,9 @@ export default function HomePage() {
         <h1>How to apply</h1>
         <ol>
           <li><Link href='/form'><a>Login here using your VIT Email Address</a></Link></li>
-          <li>Choose your preferred department</li>
-          <li>Choose your preferred time slot</li>
-          <li>You will be notified of your interview schedule by email, and you can check the status here</li>
+          <li>Fill the form with some basic details</li>
+          <li>Choose your preferred interview time slot and department</li>
+          <li>Attend the interview in the given time slot on discord</li>
         </ol>
       </section>
 

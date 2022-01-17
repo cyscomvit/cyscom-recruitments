@@ -8,7 +8,11 @@ export default function Admin() {
          value.setPageState('review')
     }, [])
     return (
-        <div style={{backgroundImage: "url(/_next/static/media/bg.75d2108d.jpg)"}}>
+        <div style={{ 
+            background: "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(/_next/static/media/bg.75d2108d.jpg)", 
+            backgroundSize: 'cover', 
+            minHeight: '92.5vh',
+            paddingTop: '70px' }} >
             {value.state.user && value.state.user.email == "hemang.ahuja2020@vitstudent.ac.in" ? <ViewForms></ViewForms> : <div>Not Found</div>}
         </div>
     )

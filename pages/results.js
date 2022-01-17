@@ -12,8 +12,13 @@ export default function ResultFunction() {
    
 
     return (
-        <div style={{backgroundImage: "url(/_next/static/media/bg.75d2108d.jpg)"}}>
-         <h1 style={{paddingTop:"5rem" , fontSize:"clamp(2.3rem,5vw,5rem)",fontFamily:"Oswald",fontWeight:"900"}}>Results here</h1>
+        <div style={{ 
+            background: "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(/_next/static/media/bg.75d2108d.jpg)", 
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center',
+            minHeight: '92.5vh',
+            paddingTop: '70px' }} >
+         <h1 style={{textAlign: 'center', marginTop: '30px', fontSize: '3rem', marginBottom: '0em'}}>Results</h1>
 
         {value.state.user ? <>
         

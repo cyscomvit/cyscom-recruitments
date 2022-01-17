@@ -13,6 +13,12 @@ export default function Done() {
         personalData: value.state.personalData,
         departmentData: value.state.departmentData,
         uid : value.state.user.email,
+        interview : {
+           status : "not_assigned",
+           time : "",
+           date : ""
+        },
+
         result : "not_published",
         selectedDepartments : [],
     } : {};
@@ -28,9 +34,14 @@ export default function Done() {
     }
 
     return (
-        <div style={{backgroundImage: "url(/_next/static/media/bg.75d2108d.jpg)" , paddingTop: "5rem" }}>
+        <div style={{ 
+            background: "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(/_next/static/media/bg.75d2108d.jpg)", 
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center',
+            minHeight: '92.5vh',
+            paddingTop: '70px' }} >
              <FormSteps></FormSteps>
-       {value.state.isLoggedIn ? <><CandidateForm data = {data}></CandidateForm><Button style={{margin:"5rem" , width:"10rem"}} onClick={handleSubmit}>Submit</Button></> : <div>Please Login</div>}
+       {value.state.isLoggedIn ? <><CandidateForm data = {data}></CandidateForm><Button style={{margin:"10px auto" , display: 'block', width:"10rem"}} size="large" type="primary" onClick={handleSubmit}>Submit</Button></> : <div>Please Login</div>}
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import { useContext, useEffect  } from 'react'
+import { useContext, useEffect } from 'react'
 import Interview from '../components/Interview'
 import Login from '../components/Login';
 import AppContext from '../context/state'
@@ -8,16 +8,21 @@ export default function InterviewFunction() {
     useEffect(() => {
         value.setPageState('interview');
     }, [])
-   
+
 
     return (
-        <div style={{backgroundImage: "url(/_next/static/media/bg.75d2108d.jpg)"}}>
-        <h1 style={{paddingTop:"5rem" , fontSize:"clamp(2.3rem,5vw,5rem)",fontFamily:"Oswald",fontWeight:"900"}}>Interview Details</h1>
+        <div style={{ 
+            background: "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(/_next/static/media/bg.75d2108d.jpg)", 
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center',
+            minHeight: '92.5vh',
+            paddingTop: '70px' }} >
+            <h1 style={{textAlign: 'center', marginTop: '30px', fontSize: '3rem', marginBottom: '0em'}}>Interview Details</h1>
 
-        {value.state.user ? <>
-        
-        <Interview user={value.state.user}></Interview>
-        </> : <Login></Login>}
+            {value.state.user ? <>
+
+                <Interview user={value.state.user}></Interview>
+            </> : <Login></Login>}
         </div>
     )
 }

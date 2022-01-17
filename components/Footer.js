@@ -16,7 +16,6 @@ export default function Footer() {
                 <div className={styles.footerLink}><a href="https://github.com/owaspvit/"><i className="fab fa-github" ></i></a></div>
                 <div className={styles.footerLink}><a href="https://medium.owaspvit.com/"><i className="fab fa-medium-m" ></i></a></div>
             </div>
-            <p className={styles.admin}>Switch to Admin Mode</p>
         </footer>
     )
 }

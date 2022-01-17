@@ -26,7 +26,12 @@ export default function Form() {
   }
   return (
     
-      <div style={{backgroundImage: "url(/_next/static/media/bg.75d2108d.jpg)" , paddingTop: "5rem" }}>
+    <div style={{ 
+        background: "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(/_next/static/media/bg.75d2108d.jpg)", 
+        backgroundSize: 'cover', 
+        backgroundPosition: 'center',
+        minHeight: '92.5vh',
+        paddingTop: '70px' }} >
             <FormSteps></FormSteps>
             {componenetToRender()}
       </div>

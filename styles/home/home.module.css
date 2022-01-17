@@ -337,6 +337,9 @@
   font-size: 1.5rem;
   font-family: Nunito;
 }
+.howto ol li {
+  font-family: Nunito;
+}
 
 @media screen and (max-width: 1280px) {
   .howto ol {

@@ -2,6 +2,8 @@ import { useState , useEffect } from "react"
 import getAllDocs from "../Firebase/ReadAllUsers";
 import readFromFirestore from "../Firebase/ReadUser";
 import CandidateForm from "./CandidateForm";
+import assignFirestore from "../Firebase/AssignInterview";
+import AssignInterview from "./AssignInterview";
 import { Button , Alert , Select} from "antd";
 const { Option } = Select;
 export default function ViewForms() {
@@ -19,17 +21,18 @@ export default function ViewForms() {
         }
         getIds();
     },[]);
+    const getData = async (id) => {
+        setLoading(true);
+        const resultDoc = await readFromFirestore(id);
+        setCurrentForm(resultDoc);
+        setLoading(false);
+    }
     useEffect(() => {
         if(currentId == null){
             return;
         }
         console.log("currentId",currentId);
-        const getData = async (id) => {
-            setLoading(true);
-            const resultDoc = await readFromFirestore(id);
-            setCurrentForm(resultDoc);
-            setLoading(false);
-        }
+
         getData(ids[currentId]);
     }, [currentId]);
 
@@ -51,6 +54,14 @@ export default function ViewForms() {
         setError(null);
         
     }
+    const updateInterview = async (data) => {
+        setLoading(true);
+        await assignFirestore(ids[currentId],data);
+        getData(ids[currentId]);
+        setLoading(false);
+     
+    }
+
     return (
         <div style={{paddingTop:"5rem"}}>
             {
@@ -73,7 +84,7 @@ export default function ViewForms() {
             </Select>
             <Button style={{margin:"10px"}} onClick = {handleBack}>Back</Button>
             <Button style={{margin:"10px"}} onClick = {handleNext}>Next</Button>
-                    
+            <AssignInterview handleSubmit={updateInterview}></AssignInterview>
         </div>
     )
 }

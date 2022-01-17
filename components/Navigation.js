@@ -52,7 +52,7 @@ export default function Navigation({ isAdmin }) {
           </>
           }
         </ul>
-        <div className={styles.burger}><i className="fas fa-bars" onClick={() => setOpen(true)}></i></div>
+        <div className={styles.burger}><i className="fas fa-bars" onClick={() => setOpen(true)} style={{color: "#fff"}}></i></div>
       </Menu>
       {open &&
         <div className={styles.sidebarOverlay}>
