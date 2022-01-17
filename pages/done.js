@@ -13,6 +13,12 @@ export default function Done() {
         personalData: value.state.personalData,
         departmentData: value.state.departmentData,
         uid : value.state.user.email,
+        interview : {
+           status : "not_assigned",
+           time : "",
+           date : ""
+        },
+
         result : "not_published",
         selectedDepartments : [],
     } : {};

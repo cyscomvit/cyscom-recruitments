@@ -18,7 +18,13 @@ export default function Interview({ user }) {
     },[]);
    
     const formatData = (interview) => {
-        return `Hello ${interview.personalData.name} Your interview is scheduled at ${interview.personalData.timePreference } on ${interview.personalData.datePreference}`;
+        if(!interview.interview){
+            return "Error";
+        }
+        if(interview.interview.status == "not_assigned"){
+            return `Hello ${interview.personalData.name} Interview is not assigned yet`;
+        }
+        return `Hello ${interview.personalData.name} Your interview is scheduled at ${interview.interview.time } on ${interview.interview.date}`;
     }
     
     return (

@@ -16,6 +16,11 @@ export default function CandidateForm({data}) {
                 <Descriptions.Item label="Time Preference">{data.personalData.timePreference}</Descriptions.Item>
             </Descriptions>
             <br/>
+            {data.interview && data.interview.status != "not_assigned" && <Descriptions title="Interview" bordered>
+                <Descriptions.Item label="Date Assign">{data.interview.date}</Descriptions.Item>
+                <Descriptions.Item label="Time Assign">{data.interview.time}</Descriptions.Item>
+            </Descriptions>}
+            <br></br>
             <Descriptions title="Department applied for" bordered>
                 {
                     data && Object.entries(data.departmentData).map((entry, index) => {
@@ -26,6 +31,8 @@ export default function CandidateForm({data}) {
                     )
                 }
             </Descriptions>
+            
+         
 
         </div>
     )
