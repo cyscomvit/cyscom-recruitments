@@ -22,9 +22,15 @@ export default function Interview({ user }) {
             return "Error";
         }
         if(interview.interview.status == "not_assigned"){
+<<<<<<< HEAD
             return `Your interview has not been scheduled yet. Hang tight!`;
         }
         return `Your interview is scheduled on ${interview.interview.date} at ${interview.interview.time }`;
+=======
+            return `Hello ${interview.personalData.name} Interview is not assigned yet`;
+        }
+        return `Hello ${interview.personalData.name} Your interview is scheduled at ${interview.interview.time } on ${interview.interview.date}`;
+>>>>>>> 8a3c7ac3d3d9efad7365de7a3e445363f1ff5213
     }
     
     return (
