@@ -16,6 +16,10 @@ function MyApp({ Component, pageProps }) {
   const [pageState, setPageState] = useState('home');
   const [formState, setFormState] = useState(0);
   const app = initFirebase();
+  const listOfAdmins = ["sparsh.raj2019@vitstudent.ac.in", "hemang.ahuja2020@vitstudent.ac.in", "nehsamir.joshi2019@vitstudent.ac.in",
+"nikhil.chandrashekhar2019@vitstudent.ac.in", "basta.aditya2019@vitstudent.ac.in", "kunalkumar.jha2019@vitstudent.ac.in",
+"sundaresan.k2019@vitstudent.ac.in", "shrushti.singhania2019@vitstudent.ac.in", "shraddhamehta.d2019@vitstudent.ac.in",
+"utkarsha.ojha2019@vitstudent.ac.in", "rishank.pratik2019@vitstudent.ac.in", "laksha.s2020@vitstudent.ac.in"];
   return (
     <AppContext.Provider
       value={{
@@ -45,7 +49,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
       <link rel="icon" href="/static/owasp-logo.png" />
       </Head>
-      <Navigation isAdmin={user && user.email == "hemang.ahuja2020@vitstudent.ac.in"}></Navigation>
+      <Navigation isAdmin={user && listOfAdmins.includes(user.email)}></Navigation>
       <Component {...pageProps} />
       <Footer />
     </AppContext.Provider>
