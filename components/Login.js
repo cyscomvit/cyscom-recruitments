@@ -8,6 +8,14 @@ const Login = () => {
 
     const [error, setError] = useState("Fetching User");
     const value = useContext(AppContext);
+    const isAdmin = (user) => {
+        try{
+            return JSON.parse(user.reloadUserInfo.customAttributes).admin;
+        }
+        catch(e){
+            return false;
+        }
+    }
     const handleLogin = (user) => {
         if(user){
         value.setIsLoggedIn(true);
@@ -22,9 +30,13 @@ const Login = () => {
                const result = await getRedirectResult(auth);
                const user = result.user;
                if(user){
+                   console.log(user)
                    if(value.state.user){
                        return;
                    }
+                   if(isAdmin(user)){
+                          value.setIsAdmin(true);
+                     }
                    if(user.email.includes("@vitstudent.ac.in")){
                      handleLogin(user);
                      setError(null);
