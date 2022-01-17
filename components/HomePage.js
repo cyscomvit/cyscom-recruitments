@@ -20,7 +20,7 @@ export default function HomePage() {
     }];
   return (
     <>
-      <section className={styles.homeWrapper}>
+      <section className={styles.homeWrapper} style={{background: 'url(/_next/static/media/bg.75d2108d.jpg)', backgroundSize: 'cover',backgroundPosition: 'center'}}>
         <div className={styles.homeContainer}>
           <p className={styles.heading}>OWASP RECRUITMENTS</p>
           <p className={styles.subheading}>2022-2023</p>
