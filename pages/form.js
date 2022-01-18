@@ -27,7 +27,7 @@ export default function Form() {
   return (
     
     <div style={{ 
-        background: "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(/_next/static/media/bg.75d2108d.jpg)", 
+        background: "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(/static/bg.jpg)", 
         backgroundSize: 'cover', 
         backgroundPosition: 'center',
         minHeight: '92.5vh',

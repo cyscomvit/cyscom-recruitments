@@ -20,7 +20,7 @@ export default function HomePage() {
     }];
   return (
     <>
-      <section className={styles.homeWrapper} style={{background: 'url(/_next/static/media/bg.75d2108d.jpg)', backgroundSize: 'cover',backgroundPosition: 'center'}}>
+      <section className={styles.homeWrapper} style={{background: 'url(/static/bg.jpg)', backgroundSize: 'cover',backgroundPosition: 'center'}}>
         <div className={styles.homeContainer}>
           <p className={styles.heading}>OWASP VITCC</p>
           <p className={styles.heading} style={{marginTop: '0px'}}>Recruitments</p>

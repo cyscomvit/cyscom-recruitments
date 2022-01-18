@@ -15,11 +15,9 @@ function MyApp({ Component, pageProps }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [pageState, setPageState] = useState('home');
   const [formState, setFormState] = useState(0);
+  const [isAdmin , setIsAdmin] = useState(false);
   const app = initFirebase();
-  const listOfAdmins = ["sparsh.raj2019@vitstudent.ac.in", "hemang.ahuja2020@vitstudent.ac.in", "nehsamir.joshi2019@vitstudent.ac.in",
-    "nikhil.chandrashekhar2019@vitstudent.ac.in", "basta.aditya2019@vitstudent.ac.in", "kunalkumar.jha2019@vitstudent.ac.in",
-    "sundaresan.k2019@vitstudent.ac.in", "shrushti.singhania2019@vitstudent.ac.in", "shraddhamehta.d2019@vitstudent.ac.in",
-    "utkarsha.ojha2019@vitstudent.ac.in", "rishank.pratik2019@vitstudent.ac.in", "laksha.s2020@vitstudent.ac.in"];
+ 
   return (
     <AppContext.Provider
       value={{
@@ -30,6 +28,7 @@ function MyApp({ Component, pageProps }) {
           pageState,
           formState,
           user,
+          isAdmin,
         },
         setPersonalData,
         setDepartmentData,
@@ -37,6 +36,7 @@ function MyApp({ Component, pageProps }) {
         setPageState,
         setFormState,
         setUser,
+        setIsAdmin,
       }}
     >
       <Head>
@@ -51,7 +51,7 @@ function MyApp({ Component, pageProps }) {
         <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Oswald&display=swap" rel="stylesheet" />
       </Head>
 
-      <Navigation isAdmin={user && listOfAdmins.includes(user.email)}></Navigation>
+      <Navigation isAdmin={isAdmin}></Navigation>
       <Component {...pageProps} />
       <Footer />
     </AppContext.Provider>
