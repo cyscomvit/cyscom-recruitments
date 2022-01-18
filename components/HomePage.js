@@ -22,7 +22,8 @@ export default function HomePage() {
     <>
       <section className={styles.homeWrapper} style={{background: 'url(/static/bg.jpg)', backgroundSize: 'cover',backgroundPosition: 'center'}}>
         <div className={styles.homeContainer}>
-          <p className={styles.heading}>OWASP RECRUITMENTS</p>
+          <p className={styles.heading}>OWASP VITCC</p>
+          <p className={styles.heading} style={{marginTop: '0px'}}>Recruitments</p>
           <p className={styles.subheading}>2022-2023</p>
           <div className={styles.buttonWrapper}>
             <Link href='/form'>
@@ -43,14 +44,14 @@ export default function HomePage() {
           </div>
           <div className={styles.dept}>
             <h3>Technical Team</h3>
-            <p>Want to delve deeper into the world of cyber-security? The Technical Team specifically deals cyber sec and how to deal with attacks!</p>
+            <p>Want to delve deeper into the world of cyber-security? The Technical Team specifically deals with cyber sec and how to deal with attacks!</p>
           </div>
           <div className={styles.dept}>
-            <h3>Graphics Team</h3>
+            <h3>Design Team</h3>
             <p>Want to create inspiring and captivating posts, brochures and reels? Join the The Graphics Department to unleash your imagination!</p>
           </div>
           <div className={styles.dept}>
-            <h3>Opeations and Social Media Team</h3>
+            <h3>Operations and Social Media Team</h3>
             <p>Be part of the chapter's Operations Team and work together to post social media content and organize various events throughout the year!</p>
           </div>
         </div>
@@ -90,10 +91,10 @@ export default function HomePage() {
       <section className={styles.howto}>
         <h1>How to apply</h1>
         <ol>
-          <li><Link href='/form'><a>Login here using your VIT Email Address</a></Link></li>
-          <li>Fill the form with some basic details</li>
-          <li>Choose your preferred interview time slot and department</li>
-          <li>Attend the interview in the given time slot on discord</li>
+          <li><Link href='/form'><a>Login here using your VIT Email Address.</a></Link></li>
+          <li>Fill the form with some basic details.</li>
+          <li>Choose your preferred interview time slot and department.</li>
+          <li>Attend the interview in the given time slot on discord.</li>
         </ol>
       </section>
 

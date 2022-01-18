@@ -15,7 +15,7 @@ const PersonalForm = ({ handleSubmit , values }) => {
         labelCol: { span: 4 },
         wrapperCol: { span: 8 },
     };
-    const [day, setDay] = useState(21);
+    const [day, setDay] = useState(22);
     const [form] = Form.useForm();
     //form for name, personal email , vit email , phone number, college year,course,registeration number,slot preference
     return (
@@ -92,10 +92,10 @@ const PersonalForm = ({ handleSubmit , values }) => {
                 <Select onChange={e => setDay(e)} className={styles.input} placeholder="Select your preferred date of interview" style={{ margin: '0px 20px', height: '40px'}}>
                     <Select.Option style={{
                         background: "#28126C"
-                    }} value="21">21</Select.Option>
+                    }} value="22">22</Select.Option>
                     <Select.Option style={{
                         background: "#28126C"
-                    }} value="22">22</Select.Option>
+                    }} value="23">23</Select.Option>
                 </Select>
             </Form.Item>
             <Form.Item
@@ -103,11 +103,11 @@ const PersonalForm = ({ handleSubmit , values }) => {
                 rules={[{ required: true, message: 'Please input your time preference!' }]}
                 style={{ margin: '10px auto', width: '50% ' }}
             >
-                {day === '21' ?
+                {day === '23' ?
                     <Select placeholder="Select your preferred time of interview" className={styles.input} style={{ color: '#fff',margin: '0px 20px', height: '40px'}}>
                         <Select.Option style={{
                             background: "#28126C"
-                        }} value="19:00 - 20:30">19:00 - 20:30</Select.Option>
+                        }} value="11:00 - 13:00">11:00 - 13:00</Select.Option>
                     </Select>
                     :
                     <Select className={styles.input} placeholder="Select your preferred time of interview" style={{ margin: '0px 20px', height: '40px'}}>

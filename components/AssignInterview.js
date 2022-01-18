@@ -25,17 +25,17 @@ export default function AssignInterview({ handleSubmit }) {
                             style={{
                                 background: "#28126C",
                             }}
-                            value="21"
+                            value="22"
                         >
-                            21
+                            22
                         </Select.Option>
                         <Select.Option
                             style={{
                                 background: "#28126C",
                             }}
-                            value="22"
+                            value="23"
                         >
-                            22
+                            23
                         </Select.Option>
                     </Select>
                 </Form.Item>
@@ -46,17 +46,20 @@ export default function AssignInterview({ handleSubmit }) {
                         { required: true, message: "Please give an assigned time!" },
                     ]}
                 >
-                    {day === '21' ?
+                    {day === '23' ?
                         <Select>
                             <Select.Option style={{
                                 background: "#28126C"
-                            }} value="19:00 - 19:30">19:00 - 19:30</Select.Option>
+                            }} value="11:00 - 11:30">11:00 - 11:30</Select.Option>
                             <Select.Option style={{
                                 background: "#28126C"
-                            }} value="19:30 - 20:00">19:30 - 20:00</Select.Option>
+                            }} value="11:30 - 12:00">11:30 - 12:00</Select.Option>
                             <Select.Option style={{
                                 background: "#28126C"
-                            }} value="20:00 - 20:30">20:00 - 20:30</Select.Option>
+                            }} value="12:00 - 12:30">12:00 - 12:30</Select.Option>
+                            <Select.Option style={{
+                                background: "#28126C"
+                            }} value="12:30 - 13:00">12:30 - 13:00</Select.Option>
                         </Select>
                         :
                         <Select>
