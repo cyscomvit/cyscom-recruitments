@@ -52,7 +52,7 @@ const FormComponent = ({ handleSubmit }) => {
                     (department) => {
                         return (
                             <>
-                                <p>Enter reason to apply for {department}</p>
+                                <p>Why do you want to join the {department} team?</p>
                                     <Form.Item
                                         key={department}
                                         name={[department, 'reason']}
