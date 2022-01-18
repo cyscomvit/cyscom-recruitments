@@ -6,7 +6,6 @@ const PubResultComp = ({onSubmit , allEmails}) => {
   const [submitting, setSubmitting] = useState(false);
 
   const onFinish = values => {
-    console.log('Received values of form: ', values);
     setSubmitting(true);
     onSubmit(values.users);
     setTimeout(() => {

@@ -21,7 +21,6 @@ const Login = () => {
         value.setIsLoggedIn(true);
         value.setFormState(1);
         value.setUser(user);
-        console.log(value.state.user)
         }
     }
     useEffect(() => {
@@ -30,7 +29,6 @@ const Login = () => {
                const result = await getRedirectResult(auth);
                const user = result.user;
                if(user){
-                   console.log(user)
                    if(value.state.user){
                        return;
                    }

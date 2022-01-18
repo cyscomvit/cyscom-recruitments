@@ -13,7 +13,6 @@ export default function Interview({ user }) {
             setInterview(myinterview);
             setLoading(false);
         }
-        console.log(user);
         getInterview();
     }, []);
 

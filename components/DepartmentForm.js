@@ -27,7 +27,6 @@ const FormComponent = ({ handleSubmit , values}) => {
                 placeholder='Select departments'
                 onChange={(value) => {
                     setErrorMessage('');
-                    console.log(value);
                     setChosenDepartments(value);
                 }}
             >

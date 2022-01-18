@@ -12,11 +12,9 @@ export default function Navigation({ isAdmin }) {
   const [open, setOpen] = useState(false);
 
   const handleClick = e => {
-    console.log(e.key)
     value.setPageState(e.key);
   };
   useEffect(() => {
-    console.log(value.state.pageState)
 
   }, [value])
   return (

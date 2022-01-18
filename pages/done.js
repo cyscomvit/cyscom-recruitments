@@ -26,8 +26,6 @@ export default function Done() {
         value.setFormState(3);
     }, [])
     const handleSubmit = async () => {
-        console.log(value.state.personalData, value.state.departmentData)
-        console.log("here");
         await addToFireStore(data);
         value.setFormState(1);
         value.setPersonalData({});

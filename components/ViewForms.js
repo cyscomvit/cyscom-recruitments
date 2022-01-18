@@ -15,7 +15,6 @@ export default function ViewForms() {
     useEffect(() => {
         const getIds = async () => {
             const Myids = await getAllDocs();
-            console.log(Myids);
             setIds(Myids);
             setCurrentId(0);
         }
@@ -31,7 +30,6 @@ export default function ViewForms() {
         if(currentId == null){
             return;
         }
-        console.log("currentId",currentId);
 
         getData(ids[currentId]);
     }, [currentId]);

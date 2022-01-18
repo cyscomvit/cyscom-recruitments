@@ -5,7 +5,6 @@ const app = initFirebase();
 const db = getFirestore(app);
 
 const assignFirestore = async (email , assigned) => {
-    console.log(email, assigned);
   try {
     const docRef = doc(db, "users", email);
     await updateDoc(docRef, {
@@ -16,7 +15,6 @@ const assignFirestore = async (email , assigned) => {
       },
     });
   } catch (error) {
-    console.log(error);
   }
 };
 

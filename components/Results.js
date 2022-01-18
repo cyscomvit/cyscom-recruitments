@@ -12,7 +12,6 @@ export default function Results({ user }) {
             setResult(resultDoc);
             setLoading(false);
         }
-        console.log(user);
         getResult();
     },[]);
    

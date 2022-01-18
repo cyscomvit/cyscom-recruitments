@@ -6,7 +6,6 @@ const updateAdmin = async (email , claims) => {
     getAuth()
     .getUserByEmail(email)
     .then((user) => {
-        console.log(user);
       // Confirm user is verified.
       if (user.emailVerified) {
         // Add custom claims for additional privileges.
