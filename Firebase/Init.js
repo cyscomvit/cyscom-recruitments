@@ -18,6 +18,7 @@ const initFirebase = () => {
     else{
         app = getApps()[0];
     }
+   
     return app;
 }
 export default initFirebase;

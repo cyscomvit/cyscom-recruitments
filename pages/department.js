@@ -8,10 +8,10 @@ export default function Department() {
     const value = useContext(AppContext);
     useEffect(() => {
         value.setPageState("department");
+        value.setFormState(2);
     }, [])
     const handleDepartmentSubmit = (values) => {
         value.setDepartmentData(values);
-        value.setFormState(3);
         Router.push('/done');
     }
     return (
@@ -24,7 +24,7 @@ export default function Department() {
              <FormSteps></FormSteps>
             {
                 value.state.isLoggedIn ?
-                    <DepartmentForm handleSubmit={handleDepartmentSubmit}></DepartmentForm> :
+                    <DepartmentForm handleSubmit={handleDepartmentSubmit} values={value.state.departmentData}></DepartmentForm> :
                     <div>
                         <h1>Please Login</h1>
                     </div>

@@ -10,7 +10,7 @@ import {
 import { useState } from 'react';
 import styles from "../styles/home/home.module.css";
 
-const PersonalForm = ({ handleSubmit }) => {
+const PersonalForm = ({ handleSubmit , values }) => {
     const layout = {
         labelCol: { span: 4 },
         wrapperCol: { span: 8 },
@@ -24,6 +24,7 @@ const PersonalForm = ({ handleSubmit }) => {
             style={{width: '100%', height: '100%', marginBottom: '-25px'}}
             name="dynamic_form_nest_item"
             onFinish={handleSubmit}
+            initialValues={values}
         >
             <Form.Item
                 name="name"

@@ -8,10 +8,10 @@ export default function About() {
     const value = useContext(AppContext);
     useEffect(() => {
         value.setPageState("about");
+        value.setFormState(1);
     }, [])
     const handlePersonalSubmit = (values) => {
         value.setPersonalData(values);
-        value.setFormState(2);
         Router.push('/department')
     }
     return (
@@ -25,7 +25,9 @@ export default function About() {
              <FormSteps></FormSteps>
             {
                 value.state.isLoggedIn ?
-                    <PersonalForm handleSubmit={handlePersonalSubmit}></PersonalForm> :
+                    <PersonalForm handleSubmit={handlePersonalSubmit} values = {
+                        value.state.personalData
+                    }></PersonalForm> :
                     <div>
                         <h1>Please Login</h1>
                     </div>

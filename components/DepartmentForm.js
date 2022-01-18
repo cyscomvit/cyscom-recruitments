@@ -1,7 +1,7 @@
 import { Form, Input, Button, Select } from 'antd';
 
 import { useState } from 'react';
-const FormComponent = ({ handleSubmit }) => {
+const FormComponent = ({ handleSubmit , values}) => {
     const departments = [
         'Technical',
         'Web Development',
@@ -9,7 +9,7 @@ const FormComponent = ({ handleSubmit }) => {
         'Operations',
     ]
     //pick departments and add reason to apply to each
-    const [chosenDepartments, setChosenDepartments] = useState([]);
+    const [chosenDepartments, setChosenDepartments] = useState(Object.keys(values));
     const [errorMessage, setErrorMessage] = useState('');
     const [form] = Form.useForm();
     const layout = {
@@ -20,13 +20,14 @@ const FormComponent = ({ handleSubmit }) => {
         <div style={{ width: '95%', margin: '0 auto' }}>
             <p>Enter department</p>
             <Select
-
+                defaultValue={chosenDepartments}
                 mode='multiple'
                 allowClear
                 style={{ width: '50%', margin: '10px 0px'}}
                 placeholder='Select departments'
                 onChange={(value) => {
                     setErrorMessage('');
+                    console.log(value);
                     setChosenDepartments(value);
                 }}
             >
@@ -38,14 +39,7 @@ const FormComponent = ({ handleSubmit }) => {
                 form={form}
                 name="dynamic_form_nest_item"
                 onFinish={handleSubmit}
-                initialValues={{
-                    nestFields: [
-                        {
-                            name: '0',
-                            reason: '',
-                        },
-                    ],
-                }}
+                initialValues={values}
 
             >
                 {chosenDepartments.map(

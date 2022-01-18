@@ -1,6 +1,6 @@
 import React from 'react'
 import addToFireStore from '../Firebase/StoreUser'
-import { useContext } from 'react'
+import { useContext , useEffect} from 'react'
 import AppContext from '../context/state'
 import { Button } from 'antd'
 import FormSteps from '../components/Steps'
@@ -22,6 +22,9 @@ export default function Done() {
         result : "not_published",
         selectedDepartments : [],
     } : {};
+    useEffect(() => {
+        value.setFormState(3);
+    }, [])
     const handleSubmit = async () => {
         console.log(value.state.personalData, value.state.departmentData)
         console.log("here");
