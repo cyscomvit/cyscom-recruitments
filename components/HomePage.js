@@ -44,7 +44,7 @@ export default function HomePage() {
           </div>
           <div className={styles.dept}>
             <h3>Technical Team</h3>
-            <p>Want to delve deeper into the world of cyber-security? The Technical Team specifically deals cyber sec and how to deal with attacks!</p>
+            <p>Want to delve deeper into the world of cyber-security? The Technical Team specifically deals with cyber sec and how to deal with attacks!</p>
           </div>
           <div className={styles.dept}>
             <h3>Design Team</h3>
