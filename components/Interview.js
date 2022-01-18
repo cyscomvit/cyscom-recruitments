@@ -34,7 +34,7 @@ export default function Interview({ user }) {
                 loading ? <Alert className={styles.alert} message="Loading..." type="info"></Alert> : interview.error ? <Alert className={styles.alert} message={interview.error} type="error"></Alert> :
                     <>
                         <h1 className={styles.alert}>{formatData(interview)}</h1>
-                        <CandidateForm data={interview}></CandidateForm>
+                                                      {/*<CandidateForm data={interview}></CandidateForm>*/}
                         <p style={{ width: '85%', margin: '0 auto', marginTop: '20px', fontSize: '1.3rem', textAlign: 'center' }}>
                             Thank you for registering.
                             Your can check your interview schedule here on 21st Jan'22, Friday.
