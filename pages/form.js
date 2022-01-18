@@ -9,6 +9,12 @@ export default function Form() {
         value.setPageState("form");
     }, []);
 
+    const dateLessThan29th = (date) => {
+        if (date.getDate() > 29) {
+            return false;
+        }
+        return true;
+    };
  
   const componenetToRender = () => {
     if(!value.state.isLoggedIn){
@@ -24,17 +30,35 @@ export default function Form() {
         Router.push('/done');
     }
   }
+  const style = { 
+    background: "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(/static/bg.jpg)", 
+    backgroundSize: 'cover', 
+    backgroundPosition: 'center',
+    minHeight: '92.5vh',
+    paddingTop: '80px' }
   return (
-    
-    <div style={{ 
-        background: "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(/static/bg.jpg)", 
-        backgroundSize: 'cover', 
-        backgroundPosition: 'center',
-        minHeight: '92.5vh',
-        paddingTop: '70px' }} >
-            <FormSteps></FormSteps>
-            {componenetToRender()}
-      </div>
+    <div>
+        {
+           
+            <div style={style} >
+                {
+                     Date.now() < new Date("2022-01-21").getTime() ?
+                        <div>
+                    <FormSteps></FormSteps>
+                    {componenetToRender()}
+                        </div>
+                     :
+                     <center>
+                     <h1>Thank you for your interest in the OWASP Recruitment Program!</h1>
+                     <h2>The recruitment program is now closed.</h2>
+                     </center>
+
+                }
+                    
+              </div>
+            
+        }
+    </div>
 
   )
 }
