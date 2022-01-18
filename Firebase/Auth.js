@@ -13,7 +13,6 @@ const signInWithGoogle = async () => {
       signInWithRedirect(auth, provider);
    }
     catch (error) {
-      console.log(error);
     }  
 }
 
