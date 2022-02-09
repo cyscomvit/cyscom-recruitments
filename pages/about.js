@@ -16,7 +16,7 @@ export default function About() {
     }
     return (
         <div style={{ 
-            background: "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(/static/bg.jpg)", 
+            background: "linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(/static/bg.jpg)", 
             backgroundSize: 'cover',
             backgroundPosition: 'center', 
             minHeight: '92.5vh',

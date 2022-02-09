@@ -4,7 +4,7 @@ import AppContext from '../context/state';
 import styles from "../styles/global/global.module.css";
 import Image from 'next/image';
 import Script from 'next/script';
-import logo from "../static/owasp-logo.png";
+import logo from "../static/cyscom-logo.png";
 
 export default function Navigation({ isAdmin }) {
 
@@ -22,7 +22,7 @@ export default function Navigation({ isAdmin }) {
       <nav className={styles.nav}>
         <Script src="https://kit.fontawesome.com/fc236c3dc0.js" crossorigin="anonymous" />
         <div className={styles.logo}>
-          <a href="https://owaspvit.com" target="_blank" rel="noreferrer"><Image src={logo} width={60} height={60} alt="logo" /></a>
+          <a href="https://cyscomvit.com" target="_blank" rel="noreferrer"><Image src={logo} width={60} height={60} alt="logo" /></a>
         </div>
         <ul className={styles.navOptions}>
           <li className={styles.navItem}><Link href='/' style={{ color: '#fff' }}><a className={styles.link}>Home</a></Link></li>

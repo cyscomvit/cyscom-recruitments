@@ -9,12 +9,12 @@ export default function Footer() {
             width: "100%",
             height: "3.5rem"   
         }} className={styles.footer}>
-            <p>OWASP VITCC</p>
+            <p>CYSCOM VITC</p>
             <div className={styles.smContainer}>
-                <div className={styles.footerLink}><a href="https://instagram.com/owaspvit/"><i className="fab fa-instagram" ></i></a></div>
-                <div className={styles.footerLink}><a href="https://www.linkedin.com/company/owasp-vit-student-chapter/"><i className="fab fa-linkedin-in" ></i></a></div>
-                <div className={styles.footerLink}><a href="https://github.com/owaspvit/"><i className="fab fa-github" ></i></a></div>
-                <div className={styles.footerLink}><a href="https://medium.owaspvit.com/"><i className="fab fa-medium-m" ></i></a></div>
+                <div className={styles.footerLink}><a href="https://instagram.com/cyscomvit/"><i className="fab fa-instagram" ></i></a></div>
+                <div className={styles.footerLink}><a href="https://www.linkedin.com/company/cyscomvit/"><i className="fab fa-linkedin-in" ></i></a></div>
+                <div className={styles.footerLink}><a href="https://github.com/cyscom"><i className="fab fa-github" ></i></a></div>
+                <div className={styles.footerLink}><a href="https://medium.cyscomvit.com/"><i className="fab fa-medium-m" ></i></a></div>
             </div>
         </footer>
     )

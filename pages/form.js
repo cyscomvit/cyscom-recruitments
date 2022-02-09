@@ -31,7 +31,7 @@ export default function Form() {
     }
   }
   const style = { 
-    background: "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(/static/bg.jpg)", 
+    background: "linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(/static/bg.jpg)", 
     backgroundSize: 'cover', 
     backgroundPosition: 'center',
     minHeight: '92.5vh',
@@ -42,17 +42,16 @@ export default function Form() {
            
             <div style={style} >
                 {
-                     Date.now() < new Date("2022-01-21").getTime() ?
+                     Date.now() < new Date("2022-02-28").getTime() ?
                         <div>
                     <FormSteps></FormSteps>
                     {componenetToRender()}
                         </div>
                      :
                      <center>
-                     <h1>Thank you for your interest in the OWASP Recruitment Program!</h1>
+                     <h1>Thank you for your interest in the CYSCOM Recruitment Program!</h1>
                      <h2>The recruitment program is now closed.</h2>
                      </center>
-
                 }
                     
               </div>

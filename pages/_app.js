@@ -40,14 +40,14 @@ function MyApp({ Component, pageProps }) {
       }}
     >
       <Head>
-        <title>OWASP VITCC Recruitments 2022-23</title>
+        <title>CYSCOM VITC Recruitments 2022-23</title>
         <meta name="author" content="Hemang Ahuja" />
       </Head>
       <Head>
-        <meta name="description" content="The official portal for OWASP VITCC's recruitments 2022-23" />
+        <meta name="description" content="The official portal for CYSCOM VITC's recruitments 2022-23" />
       </Head>
       <Head>
-        <link rel="icon" href="/static/owasp-logo.png" />
+        <link rel="icon" href="/static/cyscom-logo.png" />
         <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Oswald&display=swap" rel="stylesheet" />
       </Head>
 

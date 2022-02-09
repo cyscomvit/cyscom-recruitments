@@ -22,7 +22,7 @@ export default function HomePage() {
     <>
       <section className={styles.homeWrapper} style={{background: 'url(/static/bg.jpg)', backgroundSize: 'cover',backgroundPosition: 'center'}}>
         <div className={styles.homeContainer}>
-          <p className={styles.heading}>OWASP VITCC</p>
+          <p className={styles.heading}>CYSCOM VITC</p>
           <p className={styles.heading} style={{marginTop: '0px'}}>Recruitments</p>
           <p className={styles.subheading}>2022-2023</p>
           <div className={styles.buttonWrapper}>
@@ -58,7 +58,7 @@ export default function HomePage() {
       </section>
 
       <section className={styles.info} >
-        <h1 className={styles.infoH1}>Why join OWASP?</h1>
+        <h1 className={styles.infoH1}>Why join CYSCOM?</h1>
         <div className={styles.infoContainer}>
           <div className={styles.infoCard}>
             <div className={styles.infoCardImage}>

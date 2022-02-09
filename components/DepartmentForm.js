@@ -71,6 +71,7 @@ const FormComponent = ({ handleSubmit , values}) => {
                                     </Button>
                                 </Form.Item>
                             </Form>
+                            <Button style={{ margin: "0px 0px", width: "7rem" }} size="medium" type="primary" onClick={() => history.back()}>Edit Details</Button>
     </div>
     );
 };
