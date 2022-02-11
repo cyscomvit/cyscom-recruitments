@@ -63,7 +63,7 @@ const PersonalForm = ({ handleSubmit, values }) => {
 
                     <Select.Option style={{
                         background: "#28126C"
-                    }} value="2">1st</Select.Option>
+                    }} value="1">1st</Select.Option>
                     <Select.Option style={{
                         background: "#28126C"
                     }} value="2">2nd</Select.Option>
@@ -72,7 +72,7 @@ const PersonalForm = ({ handleSubmit, values }) => {
                     }} value="3">3rd</Select.Option>
                     <Select.Option style={{
                         background: "#28126C"
-                    }} value="3">4th</Select.Option>
+                    }} value="4">4th</Select.Option>
 
                 </Select>
             </Form.Item>
