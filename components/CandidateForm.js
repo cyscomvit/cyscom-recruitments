@@ -8,6 +8,7 @@ export default function CandidateForm({data}) {
                 <Descriptions.Item label="Name">{data.personalData.name}</Descriptions.Item>
                 <Descriptions.Item label="Personal Email">{data.personalData.personalEmail}</Descriptions.Item>
                 <Descriptions.Item label="VIT Email">{data.personalData.vitEmail}</Descriptions.Item>
+                <Descriptions.Item label="Phone Number">{data.personalData.phoneNumber}</Descriptions.Item>
                 <Descriptions.Item label="College Year">{data.personalData.collegeYear}</Descriptions.Item>
                 <Descriptions.Item label="Course">{data.personalData.course}</Descriptions.Item>
                 <Descriptions.Item label="Registeration Number">{data.personalData.registerationNumber}</Descriptions.Item>

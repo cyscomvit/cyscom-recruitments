@@ -13,7 +13,7 @@ export default function Footer() {
             <div className={styles.smContainer}>
                 <div className={styles.footerLink}><a href="https://instagram.com/cyscomvit/"><i className="fab fa-instagram" ></i></a></div>
                 <div className={styles.footerLink}><a href="https://www.linkedin.com/company/cyscomvit/"><i className="fab fa-linkedin-in" ></i></a></div>
-                <div className={styles.footerLink}><a href="https://github.com/cyscom"><i className="fab fa-github" ></i></a></div>
+                <div className={styles.footerLink}><a href="https://github.com/cyscomvit"><i className="fab fa-github" ></i></a></div>
                 <div className={styles.footerLink}><a href="https://medium.cyscomvit.com/"><i className="fab fa-medium-m" ></i></a></div>
             </div>
         </footer>
