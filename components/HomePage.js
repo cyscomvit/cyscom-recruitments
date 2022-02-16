@@ -20,10 +20,10 @@ export default function HomePage() {
     }];
   return (
     <>
-      <section className={styles.homeWrapper} style={{background: 'url(/static/bg.jpg)', backgroundSize: 'cover',backgroundPosition: 'center'}}>
+      <section className={styles.homeWrapper} style={{ background: 'url(/static/bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className={styles.homeContainer}>
           <p className={styles.heading}>CYSCOM VITC</p>
-          <p className={styles.heading} style={{marginTop: '0px'}}>Recruitments</p>
+          <p className={styles.heading} style={{ marginTop: '0px' }}>Recruitments</p>
           <p className={styles.subheading}>2022-2023</p>
           <div className={styles.buttonWrapper}>
             <Link href='/form'>
@@ -93,75 +93,11 @@ export default function HomePage() {
         <ol>
           <li><Link href='/form'><a>Login here using your VIT Email Address.</a></Link></li>
           <li>Fill the form with some basic details.</li>
-          <li>Choose your preferred interview time slot and department.</li>
-          <li>Attend the interview in the given time slot on discord.</li>
+          <li>Choose your preferred interview slot and department. The available dates are 26/02 and 27/02. Make sure you fill the form on or before the 24th!</li>
+          <li>Attend the interview in the given time slot on discord. Good luck!</li>
         </ol>
       </section>
 
-      {/* <Header style={{ height: "6rem", display: "flex", justifyContent: "space-between" }}>
-        <div style={{ fontSize: "2rem", paddingTop: "0.6rem" }}>OWASP Recruitments</div>
-        {
-          value.state.user ? <div style={{ fontSize: "1.3rem", wordSpacing: "0.6rem", paddingTop: "0.6rem" }}>Welcome {value.state.user.email}</div> : <Login></Login>
-        }
-      </Header> */}
-      {/* <Content>
-        <br></br>
-        <h1>
-          Attention all techies, The OWASP VIT Student Chapter is recruiting
-          members from the 2nd and 3rd year now for 2022-2023!!!
-        </h1>
-        <br></br>
-        <div>
-          The OWASP VIT Student Chapter was formed in 2016 and ever since, its
-          only aim has been to spread awareness about cybersecurity and teach
-          people how to deploy countermeasures to deal with cyberattacks through
-          our various blog posts, trending news, infographic posts, weekly CTFs
-          that give a practical feel and regular events, amongst which the most
-          notable are the Tetraflip 2020 hackathon, TOVC 1.0, and the WASPCON
-          cybersecurity awareness workshop.
-        </div>
-        <br></br>
-        <div>
-          Get to be a part of the biggest and VITs only Cyber Security Student
-          Chapter.The recruitment positions are open under the following
-          departments:
-        </div>
-        <br></br>
-        <List
-          grid={{ gutter: 16, column: 4 }}
-          dataSource={departments}
-          renderItem={(item) => (
-            <List.Item>
-              <Card
-                style={{
-                  width: 300,
-                }}
-                title={item.name}>{item.about}</Card>
-            </List.Item>
-          )}
-        />
-        ,
-      </Content> */}
-      {/* <div>
-
-        Join our discord handle for further updates:
-        <a href="https://discord.gg/QWQWQWQ">  Link  </a>
-        <br />
-        Registrations close on : 2020-06-30
-
-      </div>
-      <Footer style={{ textAlign: "center" }}>
-        <div>
-          <a href="https://owaspvit.com/">
-            OWASP VIT Student Chapter
-          </a>
-        </div>
-        <div>
-          <a href="https://www.instagram.com/owaspvit/">
-            Instagram
-          </a>
-        </div>
-      </Footer> */}
     </>
   );
 }
