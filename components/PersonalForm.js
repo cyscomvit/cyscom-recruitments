@@ -15,7 +15,7 @@ const PersonalForm = ({ handleSubmit, values }) => {
         labelCol: { span: 4 },
         wrapperCol: { span: 8 },
     };
-    const [day, setDay] = useState(22);
+    const [day, setDay] = useState(26);
     const [form] = Form.useForm();
     //form for name, personal email , vit email , phone number, college year,course,registeration number,slot preference
     return (
@@ -106,15 +106,27 @@ const PersonalForm = ({ handleSubmit, values }) => {
             </Form.Item>
             <Form.Item
                 name="timePreference"
-                rules={[{ required: true, message: 'Please input your time preference!' }]}
+                rules={[{ required: true, message: 'Please input your time preference' }]}
                 style={{ margin: '10px auto', width: '50% ' }}
             >
 
-                <Select placeholder="Select your preferred time of interview" className={styles.input} style={{ color: '#fff', margin: '0px 20px', height: '40px' }}>
-                    <Select.Option style={{
-                        background: "#28126C"
-                    }} value="11:00 - 13:00">11:00 - 13:00</Select.Option>
-                </Select>
+                {day === "26" ?
+                    <Select placeholder="Select your preferred time of interview" className={styles.input} style={{ color: '#fff', margin: '0px 20px', height: '40px' }}>
+
+                        <Select.Option style={{
+                            background: "#28126C"
+                        }} value="19:00 - 20:30">19:00 - 20:30</Select.Option>
+
+                    </Select>
+                    :
+                    <Select placeholder="Select your preferred time of interview" className={styles.input} style={{ color: '#fff', margin: '0px 20px', height: '40px' }}>
+
+                        <Select.Option style={{
+                            background: "#28126C"
+                        }} value="11:00 - 13:00">11:00 - 13:00</Select.Option>
+
+                    </Select>
+                }
             </Form.Item>
             <Form.Item style={{ width: '100%' }}>
                 <Button style={{ margin: "10px auto", display: 'block' }} size='large' type="primary" htmlType="submit" onClick={() => {
