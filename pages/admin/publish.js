@@ -1,7 +1,7 @@
 import PubResultComp from '../../components/PublishResultsComponent'
 import { useContext , useEffect , useState } from 'react'
 import AppContext from '../../context/state'
-import updateFirestore from '../../Firebase/PublishResults'
+import updateFirestore from '../../Firebase/AddMembers'
 import getAllDocs from '../../Firebase/ReadAllUsers'
 import ViewSelected from '../../components/ViewSelected'
 export default function Admin() {

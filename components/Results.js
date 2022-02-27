@@ -16,6 +16,7 @@ export default function Results({ user }) {
     },[]);
    
     const formatData = (resultDoc) => {
+        
         if(resultDoc.result == "not_published"){
             return `Results have not been published yet`;
         }
@@ -23,7 +24,7 @@ export default function Results({ user }) {
             return `Congratulations ${result.personalData.name}! You have been selected for the ${result.selectedDepartments.join(', ')} department(s)`;
         }
         else if(resultDoc.result == "rejected"){
-            return "Results have not been published yet!";
+            return `We regret to inform you that you have not been selected this time. But that doesn't mean you can't be selected next time. Keep trying!`;
         }
     }
     

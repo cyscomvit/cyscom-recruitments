@@ -2,6 +2,8 @@ import { Form, Alert, Button, Space, Select } from 'antd';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
 const { Option } = Select;
 import { useState } from 'react';
+import unPublish from '../Firebase/UnPublish';
+import finalPublish from '../Firebase/FinalPublish';
 const PubResultComp = ({onSubmit , allEmails}) => {
   const [submitting, setSubmitting] = useState(false);
 
@@ -63,6 +65,24 @@ const PubResultComp = ({onSubmit , allEmails}) => {
         </Button>
       </Form.Item>
     </Form>
+        <div style={{
+            display: 'flex',
+            flexDirection: "column",
+            columnGap: "1rem",
+            
+        }}>
+        <Button style={{
+          width: "10rem",
+        }} type="primary" onClick={unPublish}>
+      UnPublish
+    </Button>
+    <Button style={{
+      marginTop: "1rem",
+      width: "40rem",
+    }} type="primary" onClick={finalPublish}>
+      Final Publish ! ! !  Caution that this will reject all candidates who have not been selected already.
+    </Button>
+        </div>
     </div>
   );
 };
