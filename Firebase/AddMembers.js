@@ -23,13 +23,7 @@ const updateFirestore = async (selectedPeople) => {
                 selectedDepartments : found.departmentsSelected
             });
         }
-        else{
-            await updateDoc(docRef,{
-                result : "rejected"
-            });
         }
-
-    }
     }
     catch(error){
         console.log(error);
