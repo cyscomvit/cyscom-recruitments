@@ -208,15 +208,44 @@
   right: 10px;
   bottom: 5px;
 }
-.alert{
+.alert, .selected{
   margin-top:1rem;
   margin-bottom: 1rem;
   font-size:2.5rem;
   text-align: center;
 }
+.selected {
+  color: rgba(0, 190, 6, 0.945)
+}
 .interviewWrapper {
   background-image: url(../../static/bg.jpg);
   background-size: cover;
   height: calc(100vh-60px);
+}
+.span {
+  color: rgb(243, 243, 243);
+}
+.welcome {
+  font-size: 1.5rem;
+  font-family: Oswald;
+  color: #fff;
+  margin: 10px auto;
+  text-align: center;
+  width: 75%;
+}
+.rejectionHeader {
+  font-size: 2.2rem;
+  font-family: Oswald;
+  color: #fff;
+  margin: 10px auto;
+  width: 75%;
+  text-align: center;
+}
+.team {
+  margin: 0 auto;
+  font-size: 1.7rem;
+  width: 80%;
+  color: rgb(124, 124, 209);
+  text-align: right;
 }
 /*# sourceMappingURL=global.module.css.map */
