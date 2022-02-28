@@ -6,11 +6,13 @@ import styles from "../styles/global/global.module.css";
 export default function Results({ user }) {
     const [result, setResult] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [dept, setDept] = useState(null);
     useEffect(() => {
         const getResult = async () => {
             const resultDoc = await readFromFirestore(user.email);
             setResult(resultDoc);
             setLoading(false);
+            setDept(resultDoc.selectedDepartments);
         }
         getResult();
     }, []);
@@ -40,9 +42,26 @@ export default function Results({ user }) {
                         {result.result == "selected" &&
                             <>
                                 <h1 className={styles.selected}>Congratulations <span className={styles.span}>{result.personalData.name}! </span>
-                                    You have been selected for the <span className={styles.span}>{result.selectedDepartments.join(' and ')}</span> department(s)!</h1>
+                                    You have been selected for the <span className={styles.span}>{dept}</span> department!</h1>
                                 <p className={styles.welcome}>We are excited to welcome you to CYSCOM!</p>
-                                <p className={styles.welcome}>Further steps will be provided to you soon. Stay tuned!</p>
+                                <p className={styles.welcome}>Be sure to join our Main WhatsApp Group <a href="https://chat.whatsapp.com/HCYn7NsdESe6vNvLUmH8Np" target="_blank">here</a>!</p>
+                                <p className={styles.welcome}>
+                                    And also join the group for CYSCOM's {dept} Team 
+                                    {
+                                        dept == "Web Development" && <a target="_blank" href="https://chat.whatsapp.com/LEJ5X8PAdXe3l5hsBB6asH"> here</a>
+                                    }
+                                    {
+                                        dept == "Technical" && <a target="_blank" href="https://chat.whatsapp.com/EdzykuzuVFT2R2CFjlobOm"> here</a>
+                                    }
+                                    {
+                                        dept == "Operations" && <a target="_blank" href="https://chat.whatsapp.com/JCpFAr8iS9Y8qH2mT1ullt"> here</a>
+                                    }
+                                    {
+                                        dept == "Design" && <a target="_blank" href="https://chat.whatsapp.com/EB9lSMiaWaM5sAVGSGmUK0"> here</a>
+                                    }
+                                    !
+                                </p>
+                                
                                 <p className={styles.team}><i>- Team, CYSCOM</i></p>
                             </>
                         }
