@@ -42,10 +42,13 @@ const PubResultComp = ({onSubmit , allEmails}) => {
                     rules={[{ required: true, message: 'Missing department' }]}
                >
                <Select style={{width:"30rem"}} mode = 'multiple' placeholder="Departments">
-                    <Option value="Technical">Technical</Option>
-                    <Option value="Web Development">Web Development</Option>
+                    <Option value="Development (Web-Dev and Projects)">Development (Web-Dev and Projects)</Option>
+                    <Option value="CTF">CTF</Option>
                     <Option value="Design">Design</Option>
-                    <Option value="Operations">Operations</Option>
+                    <Option value="Event Management">Event Management</Option>
+                    <Option value="Content">Content</Option>
+                    <Option value="Social Media">Social Media</Option>
+                    <Option value="Sponsorship and Finance">Sponsorship and Finance</Option>
                </Select>
                </Form.Item>
                 <MinusCircleOutlined onClick={() => remove(name)} />

@@ -42,7 +42,7 @@ export default function Form() {
            
             <div style={style} >
                 {
-                     Date.now() < new Date("2022-10-30").getTime() ?
+                     Date.now() < new Date("2022-11-03").getTime() ?
                         <div>
                     <FormSteps></FormSteps>
                     {componenetToRender()}
