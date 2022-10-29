@@ -42,55 +42,41 @@ export default function HomePage() {
       <section className={styles.departments} id="info">
         <h1 className={styles.departmentsH1}>Choose your department</h1>
         <p className={styles.departmentsSub}>Whether you're more of a coder, graphics designer, writer or an organizer, we have departments for each skill</p>
-        <p>You can join and help in multiple departments, but you must choose one primary department.</p>
+        <p className={styles.departmentsSub}>You can join and help in multiple departments, but you must choose one primary department.</p>
         <div className={styles.departmentsContainer}>
           <div className={styles.dept}>
             <h3>Development (Web-Dev and Projects)</h3>
-            <ul>
-              <li>Works on the main chapter website, all event websites, and any other website required for projects, etc.</li>
-              <li>Develops non web-dev projects, and web apps for the chapter or anyone else to use.</li>
-            </ul>
+              <p>Works on the main chapter website, all event websites, and any other website required for projects, etc.</p>
+              <p>Develops non web-dev projects, and web apps for the chapter or anyone else to use.</p>
           </div>
           <div className={styles.dept}>
           <h3>CTF</h3>
-            <ul>
-              <li>Explores the various domains of cybersecurity such as reverse engineering, wep app exploitation etc.</li>
-              <li>Solves CTF's and participates as a team in competition held by other colleges, organisations.</li>
-            </ul>
+              <p>Explores the various domains of cybersecurity such as reverse engineering, wep app exploitation etc.</p>
+              <p>Solves CTF's and participates as a team in competition held by other colleges, organisations.</p>
           </div>
           <div className={styles.dept}>
           <h3>Design</h3>
-            <ul>
-              <li>Designs visually appealing posts and graphics for all social media handles, including news, blogs, infographics, reels, logos, etc.</li>
-              <li>Helping other departments visualise ideas. Example: Designing elements for websites</li>
-            </ul>
+              <p>Designs visually appealing posts and graphics for all social media handles, including news, blogs, infographics, reels, logos, etc.</p>
+              <p>Helping other departments visualise ideas. Example: Designing elements for websites</p>
           </div>
           <div className={styles.dept}>
           <h3>Event Management</h3>
-            <ul>
-              <li>Focuses on the minute details and arrangements required to organise any event, brining out a person's management skills as well as their creative, social, out of the box and efficient mindset/persona.</li>
-            </ul>
+              <p>Focuses on the minute details and arrangements required to organise any event, brining out a person's management skills as well as their creative, social, out of the box and efficient mindset/persona.</p>
           </div>
           <div className={styles.dept}>
           <h3>Content</h3>
-            <ul>
-              <li>Handles all the content CYSCOM puts out to the public which includes blogs, infographics,news and much more.</li>
-              <li>Plays a important role in spreading awareness about Cybersecurity, Teaching Technical Concepts to the public and finding creative ways to do the same.</li>
-            </ul>
+              <p>Handles all the content CYSCOM puts out to the public which includes blogs, infographics,news and much more.</p>
+              <p>Plays a important role in spreading awareness about Cybersecurity, Teaching Technical Concepts to the public and finding creative ways to do the same.</p>
           </div>
           <div className={styles.dept}>
           <h3>Social Media</h3>
-            <ul>
-              <li>Content posting and marketing. from spreading the message of cyscom through various platforms, coming up with, and catching up to the right trends at the right time.</li>
-              <li>'Masters of time', helping link the backend of the chapter to the entire world.</li>
-            </ul>
+              <p>Content posting and marketing. from spreading the message of cyscom through various platforms, coming up with, and catching up to the right trends at the right time.</p>
+              <p>'Masters of time', helping link the backend of the chapter to the entire world.</p>
           </div>
           <div className={styles.dept}>
           <h3>Sponsorship and Finance</h3>
-            <ul>
-              <li>Handles all the money matters and finances of the club. Also known as the “bank of CYSCOM”. This department plays one of the key roles in any event that the club conducts.</li>
-              <li>Our responsibilities also includes bringing in good and valuable sponsorships</li>
-            </ul>
+              <p>Handles all the money matters and finances of the club. Also known as the “bank of CYSCOM”. This department plays one of the key roles in any event that the club conducts.</p>
+              <p>Our responsibilities also includes bringing in good and valuable sponsorships</p>
           </div>
         </div>
       </section>
