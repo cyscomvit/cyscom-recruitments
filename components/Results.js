@@ -41,7 +41,7 @@ export default function Results({ user }) {
                             <>
                                 <h1 className={styles.selected}>Congratulations <span className={styles.span}>{result.personalData.name}! </span>
                                     You have been selected for the interview round for the <span className={styles.span}>{dept}</span> department!</h1>
-                                <p className={styles.welcome}>Be sure to join the WhatsApp Group for people selected for Round 2<a href="https://chat.whatsapp.com/HCYn7NsdESe6vNvLUmH8Np" target="_blank"  rel="noreferrer">here</a>, to know the details and timings for your offline interview round!</p>
+                                <p className={styles.welcome}>Be sure to join the WhatsApp Group for people selected for Round 2<a href="https://chat.whatsapp.com/GxcZ9UMQpSZKHci9EVpMOg" target="_blank"  rel="noreferrer">here</a>, to know the details and timings for your offline interview round!</p>
                                 <p className={styles.welcome}>You will not be considered for the next round if you do not join this group.</p>
                                 <p className={styles.team}><i>- Team, CYSCOM</i></p>
                             </>
