@@ -18,5 +18,4 @@ const updateAdmin = async (email , claims) => {
     });
 }
 
-
 export default updateAdmin;

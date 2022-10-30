@@ -123,8 +123,8 @@ export default function HomePage() {
         <ol>
           <li><Link href='/form'><a>Login here using your VIT Email Address.</a></Link></li>
           <li>Fill the form with some basic details.</li>
-          <li>Choose your preferred interview slot and department. The available dates are 05-11-2022 and 06-11-2022. Make sure you fill the form on or before the 3rd!</li>
-          <li>If you are selected, attend the interview in the given time slot on campus. The place and timings will be confirmed on Whatsapp. Good luck!</li>
+          <li>Choose your preferred interview slot and department. The available dates are 05-11-2022 and 06-11-2022. Make sure you fill the form before 03-11-2022!</li>
+          <li>If you are selected, attend the interview in the given time slot on campus. The place and timings will be confirmed on Whatsapp. The group link will be displayed on this recruitment portal if you are selected for the next round. Good luck!</li>
         </ol>
       </section>
 
