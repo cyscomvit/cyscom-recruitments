@@ -51,8 +51,8 @@ export default function HomePage() {
           </div>
           <div className={styles.dept}>
           <h3>CTF</h3>
-              <p>Explores the various domains of cybersecurity such as reverse engineering, wep app exploitation etc.</p>
-              <p>Solves CTF's and participates as a team in competition held by other colleges, organisations.</p>
+              <p>Explores the various domains of cybersecurity such as reverse engineering, web app exploitation etc.</p>
+              <p>Solves CTF's and participates as a team in competition held by other colleges and organisations.</p>
           </div>
           <div className={styles.dept}>
           <h3>Design</h3>
@@ -66,12 +66,12 @@ export default function HomePage() {
           <div className={styles.dept}>
           <h3>Content</h3>
               <p>Handles all the content CYSCOM puts out to the public which includes blogs, infographics,news and much more.</p>
-              <p>Plays a important role in spreading awareness about Cybersecurity, Teaching Technical Concepts to the public and finding creative ways to do the same.</p>
+              <p>Plays an important role in spreading awareness about Cybersecurity, Teaching Technical Concepts to the public and finding creative ways to do the same.</p>
           </div>
           <div className={styles.dept}>
           <h3>Social Media</h3>
-              <p>Content posting and marketing. from spreading the message of cyscom through various platforms, coming up with, and catching up to the right trends at the right time.</p>
-              <p>'Masters of time', helping link the backend of the chapter to the entire world.</p>
+              <p>Takes care of all the postings on social media, and marketing events online. Responsible for spreading the message of CYSCOM through various platform, this department connects the backend of our chapter to the entire world.</p>
+              <p>'Masters of time', coming up with, and catching up to the right trends at the right time,helping link the backend of the chapter to the entire world.</p>
           </div>
           <div className={styles.dept}>
           <h3>Sponsorship and Finance</h3>
@@ -87,8 +87,7 @@ export default function HomePage() {
           <div className={styles.infoCard}>
             <div className={styles.infoCardImage}>
               <div className={styles.infoIcon}><i className="fas fa-users"></i></div>
-              <p className={styles.infoText}>Get to be a part of the biggest and VITCC's only Cyber Security Student
-                Chapter!</p>
+              <p className={styles.infoText}>Get to be a part of the biggest cyber security student group in VIT Chennai!</p>
             </div>
           </div>
           <div className={styles.infoCard}>
@@ -117,8 +116,8 @@ export default function HomePage() {
         <ol>
           <li><Link href='/form'><a>Login here using your VIT Email Address.</a></Link></li>
           <li>Fill the form with some basic details.</li>
-          <li>Choose your preferred interview slot and department. The available dates are 26/02 and 27/02. Make sure you fill the form on or before the 24th!</li>
-          <li>Attend the interview in the given time slot on discord. Good luck!</li>
+          <li>Choose your preferred interview slot and department. The available dates are 05-11-2022 and 06-11-2022. Make sure you fill the form on or before the 3rd!</li>
+          <li>If you are selected, attend the interview in the given time slot on campus. The place and timings will be confirmed on Whatsapp. Good luck!</li>
         </ol>
       </section>
 
