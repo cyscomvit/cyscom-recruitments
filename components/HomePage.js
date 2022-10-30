@@ -75,7 +75,7 @@ export default function HomePage() {
           </div>
           <div className={styles.dept}>
           <h3>Sponsorship and Finance</h3>
-              <p>Handles all the money matters and finances of the club. Also known as the “bank of CYSCOM”. This department plays one of the key roles in any event that the club conducts.</p>
+              <p>Handles all the money matters and finances of the chapter. Also known as the “Bank of CYSCOM”. This department plays one of the key roles in any event that the chapter conducts.</p>
               <p>Our responsibilities also includes bringing in good and valuable sponsorships</p>
           </div>
         </div>
