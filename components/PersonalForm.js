@@ -98,10 +98,10 @@ const PersonalForm = ({ handleSubmit, values }) => {
                 <Select onChange={e => setDay(e)} className={styles.input} placeholder="Select your preferred date of interview" style={{ margin: '0px 20px', height: '40px' }}>
                     <Select.Option style={{
                         background: "#28126C"
-                    }} value="05">05</Select.Option>
+                    }} value="05">05 November, 2022</Select.Option>
                     <Select.Option style={{
                         background: "#28126C"
-                    }} value="06">06</Select.Option>
+                    }} value="06">06 November, 2022</Select.Option>
                 </Select>
             </Form.Item>
             <Form.Item
@@ -115,7 +115,7 @@ const PersonalForm = ({ handleSubmit, values }) => {
 
                         <Select.Option style={{
                             background: "#28126C"
-                        }} value="19:00 - 20:30">19:00 - 20:30</Select.Option>
+                        }} value="Morning Slot">Morning Slot</Select.Option>
 
                     </Select>
                     :
@@ -123,7 +123,25 @@ const PersonalForm = ({ handleSubmit, values }) => {
 
                         <Select.Option style={{
                             background: "#28126C"
-                        }} value="11:00 - 13:00">11:00 - 13:00</Select.Option>
+                        }} value="Evening Slot">Evening Slot</Select.Option>
+
+                    </Select>
+                }
+                
+                {day === "06" ?
+                    <Select placeholder="Select your preferred time of interview" className={styles.input} style={{ color: '#fff', margin: '0px 20px', height: '40px' }}>
+
+                        <Select.Option style={{
+                            background: "#28126C"
+                        }} value="Morning Slot">Morning Slot</Select.Option>
+
+                    </Select>
+                    :
+                    <Select placeholder="Select your preferred time of interview" className={styles.input} style={{ color: '#fff', margin: '0px 20px', height: '40px' }}>
+
+                        <Select.Option style={{
+                            background: "#28126C"
+                        }} value="Evening Slot">Evening Slot</Select.Option>
 
                     </Select>
                 }
