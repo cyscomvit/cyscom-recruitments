@@ -37,7 +37,7 @@ export default function Interview({ user }) {
                         <p style={{ width: '85%', margin: '0 auto', marginTop: '20px', fontSize: '1.3rem', textAlign: 'center' }}>
                             Thank you for registering.
 
-                            Please do join our discord server <a href="https://discord.gg/rKqdRUDvSw">here</a>  and check the category "Recruitment 2022-23". Also do react to the message in #announcements of this category. For any queries, join our WhatsApp Help desk <a href="https://chat.whatsapp.com/HF6K57JwCcnKtrf57WgFXy">here.</a>
+                            Please do join our discord server <a href="https://discord.gg/rKqdRUDvSw">here</a>  and check the category "Recruitment 2022-23". Also do react to the message in #announcements of this category. For any queries, join our WhatsApp Help desk <a href="https://chat.whatsapp.com/GxcZ9UMQpSZKHci9EVpMOg">here.</a>
 
                             Stay tuned!
                         </p>
