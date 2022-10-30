@@ -98,10 +98,10 @@ const PersonalForm = ({ handleSubmit, values }) => {
                 <Select onChange={e => setDay(e)} className={styles.input} placeholder="Select your preferred date of interview" style={{ margin: '0px 20px', height: '40px' }}>
                     <Select.Option style={{
                         background: "#28126C"
-                    }} value="26">26</Select.Option>
+                    }} value="05">05</Select.Option>
                     <Select.Option style={{
                         background: "#28126C"
-                    }} value="27">27</Select.Option>
+                    }} value="06">06</Select.Option>
                 </Select>
             </Form.Item>
             <Form.Item
@@ -110,7 +110,7 @@ const PersonalForm = ({ handleSubmit, values }) => {
                 style={{ margin: '10px auto', width: '50% ' }}
             >
 
-                {day === "26" ?
+                {day === "05" ?
                     <Select placeholder="Select your preferred time of interview" className={styles.input} style={{ color: '#fff', margin: '0px 20px', height: '40px' }}>
 
                         <Select.Option style={{
