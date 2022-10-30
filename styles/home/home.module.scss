@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 .homeWrapper {
     background-image: url("../../static/bg.jpg");
     width: 100%;
@@ -29,10 +29,9 @@
     margin-top: 100px;
     @media screen and (max-width: 768px) {
         margin-top: 0px;
-        
     }
 }
-.subheading{
+.subheading {
     font-size: clamp(1.5rem, 2vw, 2rem);
     font-family: Oswald;
     font-style: italic;
@@ -79,7 +78,8 @@
         background-color: rgb(1, 182, 70);
     }
 }
-.button1, .button2 {
+.button1,
+.button2 {
     @media screen and (max-width: 768px) {
         font-size: 1.2rem;
     }
@@ -89,8 +89,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgb(137,0,200);
-    background: radial-gradient(circle, rgba(137,0,200,1) 0%, rgba(50,4,136,1) 71%);
+    background: rgb(137, 0, 200);
+    background: radial-gradient(
+        circle,
+        rgba(137, 0, 200, 1) 0%,
+        rgba(50, 4, 136, 1) 71%
+    );
     scroll-behavior: smooth;
 }
 .infoH1 {
@@ -105,7 +109,6 @@
     margin-bottom: 20px;
     @media screen and (max-width: 1376px) {
         flex-direction: column;
-        
     }
 }
 .infoCard {
@@ -120,7 +123,6 @@
     padding: 5px 10px;
     @media screen and (max-width: 1376px) {
         margin: 10px 0px;
-        
     }
     transition: 0.2s all ease;
     &:hover {
@@ -142,7 +144,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color : #D4C2FC;
+    background-color: #d4c2fc;
     scroll-behavior: smooth;
     color: rgb(27, 27, 27);
 }
@@ -162,36 +164,36 @@
     width: 50%;
     text-align: center;
     @media screen and (max-width: 1280px) {
-        width: 90%;   
+        width: 90%;
     }
 }
 .departmentsContainer {
     width: 40%;
     margin: 10px auto;
     @media screen and (max-width: 1280px) {
-        width: 90%;   
+        width: 90%;
     }
 }
 .dept:first-child {
-    border-left:rgb(61, 68, 163) solid 5px;
+    border-left: #3d44a3 solid 5px;
 }
-.dept:nth-child(2){
-    border-left:rgb(245, 49, 0) solid 5px;
+.dept:nth-child(2) {
+    border-left: #f53100 solid 5px;
 }
-.dept:nth-child(3){
-    border-left:rgb(0, 153, 0) solid 5px;
+.dept:nth-child(3) {
+    border-left: #009900 solid 5px;
 }
-.dept:nth-child(4){
-    border-left:rgb(151, 0, 76) solid 5px;
+.dept:nth-child(4) {
+    border-left: #97004c solid 5px;
 }
-.dept:nth-child(5){
-    border-left:rgb(26, 120, 72) solid 5px;
+.dept:nth-child(5) {
+    border-left: #1a7848 solid 5px;
 }
-.dept:nth-child(6){
-    border-left:rgb(162, 184, 37) solid 5px;
+.dept:nth-child(6) {
+    border-left: #a2b825 solid 5px;
 }
-.dept:nth-child(7){
-    border-left:rgb(198, 5, 156) solid 5px;
+.dept:nth-child(7) {
+    border-left: #c6059c solid 5px;
 }
 .dept {
     padding-left: 20px;
@@ -212,7 +214,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color : #D4C2FC;
+    background-color: #d4c2fc;
     scroll-behavior: smooth;
     color: rgb(27, 27, 27);
     h1 {
@@ -229,10 +231,9 @@
         font-size: 1.5rem;
         font-family: Nunito;
         @media screen and (max-width: 1280px) {
-            width: 80%;   
+            width: 80%;
         }
     }
-
 }
 .footer {
     width: 100%;
