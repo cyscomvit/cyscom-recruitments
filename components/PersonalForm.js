@@ -110,41 +110,15 @@ const PersonalForm = ({ handleSubmit, values }) => {
                 style={{ margin: '10px auto', width: '50% ' }}
             >
 
-                {day === "05" ?
                     <Select placeholder="Select your preferred time of interview" className={styles.input} style={{ color: '#fff', margin: '0px 20px', height: '40px' }}>
 
                         <Select.Option style={{
                             background: "#28126C"
                         }} value="Morning Slot">Morning Slot</Select.Option>
-
-                    </Select>
-                    :
-                    <Select placeholder="Select your preferred time of interview" className={styles.input} style={{ color: '#fff', margin: '0px 20px', height: '40px' }}>
-
                         <Select.Option style={{
                             background: "#28126C"
                         }} value="Evening Slot">Evening Slot</Select.Option>
-
                     </Select>
-                }
-                
-                {day === "06" ?
-                    <Select placeholder="Select your preferred time of interview" className={styles.input} style={{ color: '#fff', margin: '0px 20px', height: '40px' }}>
-
-                        <Select.Option style={{
-                            background: "#28126C"
-                        }} value="Morning Slot">Morning Slot</Select.Option>
-
-                    </Select>
-                    :
-                    <Select placeholder="Select your preferred time of interview" className={styles.input} style={{ color: '#fff', margin: '0px 20px', height: '40px' }}>
-
-                        <Select.Option style={{
-                            background: "#28126C"
-                        }} value="Evening Slot">Evening Slot</Select.Option>
-
-                    </Select>
-                }
             </Form.Item>
             <Form.Item style={{ width: '100%' }}>
                 <Button style={{ margin: "10px auto", display: 'block' }} size='large' type="primary" htmlType="submit" onClick={() => {

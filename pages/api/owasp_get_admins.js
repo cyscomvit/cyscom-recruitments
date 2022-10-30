@@ -13,6 +13,7 @@ export default async function handler(req,res){
     }
     catch(e){
         res.status(500).send(e.message);
+        return;
     }
     res.status(200).send(admins);
 }
