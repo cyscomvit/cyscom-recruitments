@@ -48,35 +48,42 @@ export default function HomePage() {
             <h3>Development (Web-Dev and Projects)</h3>
               <p>Works on the main chapter website, all event websites, and any other website required for projects, etc.</p>
               <p>Develops non web-dev projects, and web apps for the chapter or anyone else to use.</p>
+              <p>Candidate Requirements: Candidates who are interested in web-dev and working on projects can apply to this department</p>
           </div>
           <div className={styles.dept}>
           <h3>CTF</h3>
               <p>Explores the various domains of cybersecurity such as reverse engineering, web app exploitation etc.</p>
               <p>Solves CTF's and participates as a team in competition held by other colleges and organisations.</p>
+              <p>Candidate Requirements: Candidates interested to compete in CTFs and learn cyber security are welcome.</p>
           </div>
           <div className={styles.dept}>
           <h3>Design</h3>
               <p>Designs visually appealing posts and graphics for all social media handles, including news, blogs, infographics, reels, logos, etc.</p>
               <p>Helping other departments visualise ideas. Example: Designing elements for websites</p>
+              <p>Candidate Requirements: Candidates who are passionate video editors and designers are more than welcome.</p>
           </div>
           <div className={styles.dept}>
           <h3>Event Management</h3>
               <p>Focuses on the minute details and arrangements required to organise any event, brining out a person's management skills as well as their creative, social, out of the box and efficient mindset/persona.</p>
+              <p>Candidate Requirements: Candidates who are interested in management are welcome.</p>
           </div>
           <div className={styles.dept}>
           <h3>Content</h3>
-              <p>Handles all the content CYSCOM puts out to the public which includes blogs, infographics,news and much more.</p>
+              <p>Handles all the content CYSCOM puts out to the public which includes blogs, infographics, news and much more.</p>
               <p>Plays an important role in spreading awareness about Cybersecurity, Teaching Technical Concepts to the public and finding creative ways to do the same.</p>
+              <p>Candidate Requirements: Passionate technical and non-technical content writers are welcome.</p>
           </div>
           <div className={styles.dept}>
           <h3>Social Media</h3>
               <p>Takes care of all the postings on social media, and marketing events online. Responsible for spreading the message of CYSCOM through various platform, this department connects the backend of our chapter to the entire world.</p>
               <p>'Masters of time', coming up with, and catching up to the right trends at the right time,helping link the backend of the chapter to the entire world.</p>
+              <p>Candidate Requirements: People who want to manage a active and vibrant chapter's online handles are welcome. Everyone interested can apply.</p>
           </div>
           <div className={styles.dept}>
           <h3>Sponsorship and Finance</h3>
               <p>Handles all the money matters and finances of the chapter. Also known as the “Bank of CYSCOM”. This department plays one of the key roles in any event that the chapter conducts.</p>
               <p>Our responsibilities also includes bringing in good and valuable sponsorships</p>
+              <p>Candidate Requirements: Interested Candidates are welcome.</p>
           </div>
         </div>
       </section>
