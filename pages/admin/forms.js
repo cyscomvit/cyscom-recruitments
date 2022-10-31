@@ -14,6 +14,7 @@ export default function Admin() {
             backgroundSize: 'cover', 
             minHeight: '92.5vh',
             paddingTop: '70px' }} >
+                {}
             {value.state.user && value.state.isAdmin ? <ViewForms></ViewForms> : <div>Not Found</div>}
         </div>
     )

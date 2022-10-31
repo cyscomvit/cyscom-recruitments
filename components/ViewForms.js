@@ -66,7 +66,11 @@ export default function ViewForms() {
                 
                 (loading ? <div>Loading...</div> : <div>
                     {error ? <Alert message={error} type="error"></Alert> : null}
-                    <div>{currentForm.error ? currentForm.error : <CandidateForm data = {currentForm}></CandidateForm>}</div>
+                    <div>{currentForm.error ? currentForm.error :<div><span style={
+                        {
+                            fontSize: "2rem",
+                        }
+                    }>{ids.length} people have applied.</span><CandidateForm data = {currentForm}></CandidateForm></div>}</div>
                     
                 </div>)
                 
