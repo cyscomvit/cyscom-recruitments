@@ -6,7 +6,6 @@ export default async function handler(req,res){
     }
     try{
         const admins = process.env.admins.split(",");
-        console.log(admins,req.body.email);
         
         res.status(200).send(admins.includes(req.body.email));
     }
