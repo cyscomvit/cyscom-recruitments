@@ -25,17 +25,17 @@ export default function AssignInterview({ handleSubmit }) {
                             style={{
                                 background: "#28126C",
                             }}
-                            value="26"
+                            value="05"
                         >
-                            26
+                            05
                         </Select.Option>
                         <Select.Option
                             style={{
                                 background: "#28126C",
                             }}
-                            value="27"
+                            value="06"
                         >
-                            27
+                            06
                         </Select.Option>
                     </Select>
                 </Form.Item>

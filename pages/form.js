@@ -8,13 +8,6 @@ export default function Form() {
     useEffect(() => {
         value.setPageState("form");
     }, []);
-
-    const dateLessThan29th = (date) => {
-        if (date.getDate() > 29) {
-            return false;
-        }
-        return true;
-    };
  
   const componenetToRender = () => {
     if(!value.state.isLoggedIn){
@@ -42,7 +35,7 @@ export default function Form() {
            
             <div style={style} >
                 {
-                     Date.now() < new Date("2022-11-03").getTime() ?
+                     Date.now() < new Date("2022-11-01").getTime() ?
                         <div>
                     <FormSteps></FormSteps>
                     {componenetToRender()}
