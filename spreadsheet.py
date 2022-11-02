@@ -1,4 +1,4 @@
-from firebase_admin import credentials, firestore,initialize_app
+from firebase_admin import credentials, firestore, initialize_app
 
 # Spreadsheet to push the rows to, make sure that the service account is shared and has edit access.
 spreadsheet_id = ''
@@ -33,26 +33,24 @@ for doc in docs:
     user_data_dict = doc.to_dict()
     if "personalData" in user_data_dict:
         if "name" in user_data_dict["personalData"]:
-            if "vin" < user_data_dict["uid"]:
-                user_data_row = [
-                    user_data_dict["personalData"]["name"],
-                    user_data_dict["personalData"]["vitEmail"],
-                    user_data_dict["personalData"]["phoneNumber"],
-                    user_data_dict["personalData"]["registerationNumber"],
-                    user_data_dict["personalData"]["collegeYear"],
-                    user_data_dict["personalData"]["datePreference"] + "th" + " " + user_data_dict["personalData"]["timePreference"],
-                    user_data_dict["personalData"]["timePreference"],
-                    user_data_dict["personalData"]["personalEmail"],
-                ]
+            user_data_row = [
+                user_data_dict["personalData"]["name"],
+                user_data_dict["uid"],
+                user_data_dict["personalData"]["phoneNumber"],
+                user_data_dict["personalData"]["registerationNumber"],
+                user_data_dict["personalData"]["collegeYear"],
+                user_data_dict["personalData"]["datePreference"] + "th" + " " + user_data_dict["personalData"]["timePreference"],
+                user_data_dict["personalData"]["personalEmail"],
+            ]
 
-                user_data_row.append(user_data_dict["departmentData"]["CTF"]["reason"]) if ("CTF" in user_data_dict["departmentData"]) else user_data_row.append("")
-                user_data_row.append(user_data_dict["departmentData"]["Development (Web-Dev and Projects)"]["reason"]) if ("Development (Web-Dev and Projects)" in user_data_dict["departmentData"]) else user_data_row.append("")
-                user_data_row.append(user_data_dict["departmentData"]["Content"]["reason"]) if ("Content" in user_data_dict["departmentData"]) else user_data_row.append("")
-                user_data_row.append(user_data_dict["departmentData"]["Design"]["reason"]) if ("Design" in user_data_dict["departmentData"]) else user_data_row.append("")
-                user_data_row.append(user_data_dict["departmentData"]["Social media"]["reason"]) if ("Social media" in user_data_dict["departmentData"]) else user_data_row.append("")
-                user_data_row.append(user_data_dict["departmentData"]["Event Management"]["reason"]) if ("Event Management" in user_data_dict["departmentData"]) else user_data_row.append("")
-                user_data_row.append(user_data_dict["departmentData"]["Sponsorship and Finance"]["reason"]) if ("Sponsorship and Finance" in user_data_dict["departmentData"]) else user_data_row.append("")
+            user_data_row.append(user_data_dict["departmentData"]["CTF"]["reason"]) if ("CTF" in user_data_dict["departmentData"]) else user_data_row.append("")
+            user_data_row.append(user_data_dict["departmentData"]["Development (Web-Dev and Projects)"]["reason"]) if ("Development (Web-Dev and Projects)" in user_data_dict["departmentData"]) else user_data_row.append("")
+            user_data_row.append(user_data_dict["departmentData"]["Content"]["reason"]) if ("Content" in user_data_dict["departmentData"]) else user_data_row.append("")
+            user_data_row.append(user_data_dict["departmentData"]["Design"]["reason"]) if ("Design" in user_data_dict["departmentData"]) else user_data_row.append("")
+            user_data_row.append(user_data_dict["departmentData"]["Social media"]["reason"]) if ("Social media" in user_data_dict["departmentData"]) else user_data_row.append("")
+            user_data_row.append(user_data_dict["departmentData"]["Event Management"]["reason"]) if ("Event Management" in user_data_dict["departmentData"]) else user_data_row.append("")
+            user_data_row.append(user_data_dict["departmentData"]["Sponsorship and Finance"]["reason"]) if ("Sponsorship and Finance" in user_data_dict["departmentData"]) else user_data_row.append("")
 
 
-                update_values_in_spreadsheet(spreadsheet_id, user_data_row, index,print_rows_added_to_spreadsheet=True)
-                index += 1
+            update_values_in_spreadsheet(spreadsheet_id, user_data_row, index,print_rows_added_to_spreadsheet=True)
+            index += 1
