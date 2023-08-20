@@ -1,5 +1,3 @@
-
-
 import updateAdmin from "../../Firebase/UpdateAdmin";
 import getAdmins from "../../Firebase/GetAdmins";
 export default async function handler (req,res){

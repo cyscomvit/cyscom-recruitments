@@ -3,10 +3,13 @@ import { Form, Input, Button, Select } from 'antd';
 import { useState } from 'react';
 const FormComponent = ({ handleSubmit , values}) => {
     const departments = [
-        'Technical',
-        'Web Development',
+        'Development (Web-Dev and Projects)',
+        'CTF',
         'Design',
-        'Operations',
+        'Event Management',
+        'Content',
+        'Social media',
+        'Sponsorship and Finance'
     ]
     //pick departments and add reason to apply to each
     const [chosenDepartments, setChosenDepartments] = useState(Object.keys(values));

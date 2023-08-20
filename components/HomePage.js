@@ -11,13 +11,18 @@ import Image from "next/image";
 export default function HomePage() {
   const value = useContext(AppContext);
 
-  const departments =
-    [{ name: "Technical", about: "Responsible for vulnaribility project tools and techniques, Solving CTFS, Writing blogs about latest vulnerabilities, etc." },
-    { name: "Development", about: "Responsible for developing and maintaining the website, maintaining the database, etc." },
-    { name: "Design", about: "Responsible for designing infographics etc." },
-    {
-      name: "Operations", about: "Responsible for maintaining social media , managing the chapter etc."
-    }];
+  const departments = [
+    { name: "Development (Web-Dev and Projects)", about: "Works on the main chapter website, all event websites, and any other website required for projects, etc." },
+    { name: "CTF", about: "Explores the various domains of cybersecurity such as reverse engineering, wep app exploitation etc." },
+    { name: "Design", about: "Designs visually appealing posts and graphics for all social media handles, including news, blogs, infographics, reels, logos, etc." },
+    { name: "Event Management", about: "Focuses on the minute details and arrangements required to organise any event, brining out a person's management skills as well as their creative, social, out of the box and efficient mindset/persona."},
+    { name: "Content", about: "Handles all the content CYSCOM puts out to the public which includes blogs, infographics,news and much more."},
+    { name: "Social Media", about: "Content posting and marketing. from spreading the message of cyscom through various platforms, coming up with, and catching up to the right trends at the right time."},
+    { name: "Sponsorship and Finance", about: "Handles all the money matters and finances of the club. Also known as the “bank of CYSCOM”. This department plays one of the key roles in any event that the club conducts. and Finance"},
+
+
+  ];
+
   return (
     <>
       <section className={styles.homeWrapper} style={{ background: 'url(/static/bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
@@ -36,23 +41,49 @@ export default function HomePage() {
 
       <section className={styles.departments} id="info">
         <h1 className={styles.departmentsH1}>Choose your department</h1>
-        <p className={styles.departmentsSub}>Whether you're more of a coder, graphics designer, or even an organizer, we have departments for each skill</p>
+        <p className={styles.departmentsSub}>Whether you're more of a coder, graphics designer, writer or an organizer, we have departments for each skill</p>
+        <p className={styles.departmentsSub}>You can join and help in multiple departments, but you must choose one primary department.</p>
         <div className={styles.departmentsContainer}>
           <div className={styles.dept}>
-            <h3>Development Team</h3>
-            <p>Interested in web and android development? Join the Development team to hone your dev skills and work on real applications!</p>
+            <h3>Development (Web-Dev and Projects)</h3>
+              <p>Works on the main chapter website, all event websites, and any other website required for projects, etc.</p>
+              <p>Develops non web-dev projects, and web apps for the chapter or anyone else to use.</p>
+              <p>Candidate Requirements: Candidates who are interested in web-dev and working on projects can apply to this department</p>
           </div>
           <div className={styles.dept}>
-            <h3>Technical Team</h3>
-            <p>Want to delve deeper into the world of cyber-security? The Technical Team specifically deals with cyber sec and how to deal with attacks!</p>
+          <h3>CTF</h3>
+              <p>Explores the various domains of cybersecurity such as reverse engineering, web app exploitation etc.</p>
+              <p>Solves CTF's and participates as a team in competition held by other colleges and organisations.</p>
+              <p>Candidate Requirements: Candidates interested to compete in CTFs and learn cyber security are welcome.</p>
           </div>
           <div className={styles.dept}>
-            <h3>Design Team</h3>
-            <p>Want to create inspiring and captivating posts, brochures and reels? Join the The Graphics Department to unleash your imagination!</p>
+          <h3>Design</h3>
+              <p>Designs visually appealing posts and graphics for all social media handles, including news, blogs, infographics, reels, logos, etc.</p>
+              <p>Helping other departments visualise ideas. Example: Designing elements for websites</p>
+              <p>Candidate Requirements: Candidates who are passionate video editors and designers are more than welcome.</p>
           </div>
           <div className={styles.dept}>
-            <h3>Operations and Social Media Team</h3>
-            <p>Be part of the chapter's Operations Team and work together to post social media content and organize various events throughout the year!</p>
+          <h3>Event Management</h3>
+              <p>Focuses on the minute details and arrangements required to organise any event, brining out a person's management skills as well as their creative, social, out of the box and efficient mindset/persona.</p>
+              <p>Candidate Requirements: Candidates who are interested in management are welcome.</p>
+          </div>
+          <div className={styles.dept}>
+          <h3>Content</h3>
+              <p>Handles all the content CYSCOM puts out to the public which includes blogs, infographics, news and much more.</p>
+              <p>Plays an important role in spreading awareness about Cybersecurity, Teaching Technical Concepts to the public and finding creative ways to do the same.</p>
+              <p>Candidate Requirements: Passionate technical and non-technical content writers are welcome.</p>
+          </div>
+          <div className={styles.dept}>
+          <h3>Social Media</h3>
+              <p>Takes care of all the postings on social media, and marketing events online. Responsible for spreading the message of CYSCOM through various platform, this department connects the backend of our chapter to the entire world.</p>
+              <p>'Masters of time', coming up with, and catching up to the right trends at the right time,helping link the backend of the chapter to the entire world.</p>
+              <p>Candidate Requirements: People who want to manage a active and vibrant chapter's online handles are welcome. Everyone interested can apply.</p>
+          </div>
+          <div className={styles.dept}>
+          <h3>Sponsorship and Finance</h3>
+              <p>Handles all the money matters and finances of the chapter. Also known as the “Bank of CYSCOM”. This department plays one of the key roles in any event that the chapter conducts.</p>
+              <p>Our responsibilities also includes bringing in good and valuable sponsorships</p>
+              <p>Candidate Requirements: Interested Candidates are welcome.</p>
           </div>
         </div>
       </section>
@@ -63,8 +94,7 @@ export default function HomePage() {
           <div className={styles.infoCard}>
             <div className={styles.infoCardImage}>
               <div className={styles.infoIcon}><i className="fas fa-users"></i></div>
-              <p className={styles.infoText}>Get to be a part of the biggest and VITCC's only Cyber Security Student
-                Chapter!</p>
+              <p className={styles.infoText}>Get to be a part of the biggest cyber security student group in VIT Chennai!</p>
             </div>
           </div>
           <div className={styles.infoCard}>
@@ -93,8 +123,8 @@ export default function HomePage() {
         <ol>
           <li><Link href='/form'><a>Login here using your VIT Email Address.</a></Link></li>
           <li>Fill the form with some basic details.</li>
-          <li>Choose your preferred interview slot and department. The available dates are 26/02 and 27/02. Make sure you fill the form on or before the 24th!</li>
-          <li>Attend the interview in the given time slot on discord. Good luck!</li>
+          <li>Choose your preferred interview slot and department. The available dates are 05-11-2022 and 06-11-2022. Make sure you fill the form before 03-11-2022!</li>
+          <li>If you are selected, attend the interview in the given time slot on campus. The place and timings will be confirmed on Whatsapp. The group link will be displayed on this recruitment portal if you are selected for the next round. Good luck!</li>
         </ol>
       </section>
 

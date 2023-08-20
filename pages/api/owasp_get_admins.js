@@ -8,6 +8,12 @@ export default async function handler(req,res){
         res.status(401).send("Unathorized");
         return;
     }
-    const admins = await getAdmins();
+    try{
+        const admins = await getAdmins();
+    }
+    catch(e){
+        res.status(500).send(e.message);
+        return;
+    }
     res.status(200).send(admins);
 }

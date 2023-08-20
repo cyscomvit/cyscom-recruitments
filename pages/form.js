@@ -8,13 +8,6 @@ export default function Form() {
     useEffect(() => {
         value.setPageState("form");
     }, []);
-
-    const dateLessThan29th = (date) => {
-        if (date.getDate() > 29) {
-            return false;
-        }
-        return true;
-    };
  
   const componenetToRender = () => {
     if(!value.state.isLoggedIn){
@@ -42,7 +35,7 @@ export default function Form() {
            
             <div style={style} >
                 {
-                     Date.now() < new Date("2022-02-24").getTime() ?
+                     Date.now() < new Date("2024-11-02").getTime() ?
                         <div>
                     <FormSteps></FormSteps>
                     {componenetToRender()}
@@ -50,7 +43,7 @@ export default function Form() {
                      :
                      <center>
                      <h1>Thank you for your interest in the CYSCOM Recruitment Program!</h1>
-                     <h2>The recruitment program is now closed.</h2>
+                     <h2>The recruitment program is currently closed. Follow us on <a href="https://www.instagram.com/cyscomvit" target="_blank" rel="noreferrer">Instagram</a> to know the results for this year's recruitments, or to know when we recruit next.</h2>
                      </center>
                 }
                     
