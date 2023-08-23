@@ -43,6 +43,16 @@ const FormComponent = ({ handleSubmit, values }) => {
     labelCol: { span: 4 },
     wrapperCol: { span: 8 },
   };
+
+  const validateForm = () => {
+    if (chosenDepartments.length === 0) {
+      setErrorMessage('Please select at least one department');
+      return;
+    }
+    form.validateFields();
+    form.submit();
+  };
+
   return (
     <div style={{ width: '95%', margin: '0 auto' }}>
       <p>Choose department</p>
@@ -80,7 +90,10 @@ const FormComponent = ({ handleSubmit, values }) => {
                   key={`question-${department}-${index}`}
                   name={[department, `question${index}`]}
                   rules={[
-                    { required: true, message: 'Please answer the question!' },
+                    {
+                      required: true,
+                      message: 'Please answer the question!',
+                    },
                   ]}
                 >
                   <Input.TextArea
@@ -97,13 +110,8 @@ const FormComponent = ({ handleSubmit, values }) => {
           <Button
             style={{ margin: '0 auto' }}
             type='primary'
-            htmlType='submit'
             onClick={() => {
-              if (chosenDepartments.length === 0) {
-                setErrorMessage('Please select at least one department');
-                return;
-              }
-              form.validateFields();
+              validateForm();
             }}
           >
             Submit
