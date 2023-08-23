@@ -88,7 +88,7 @@ const FormComponent = ({ handleSubmit, values }) => {
               departmentQuestions[department].map((question, index) => (
                 <Form.Item
                   key={`question-${department}-${index}`}
-                  name={[department, `question${index}`]}
+                  name={[department, `question${index + 1}`]}
                   rules={[
                     {
                       required: true,

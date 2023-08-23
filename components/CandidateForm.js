@@ -50,7 +50,10 @@ export default function CandidateForm({ data }) {
           ([department, questions], index) => (
             <Descriptions.Item label={department} key={index}>
               {Object.entries(questions).map(([questionKey, answer], idx) => (
-                <div key={idx}>{`${answer}`}</div>
+                <div key={idx}>
+                  {answer}
+                  <p></p>
+                </div>
               ))}
             </Descriptions.Item>
           )

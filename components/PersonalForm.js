@@ -15,7 +15,7 @@ const PersonalForm = ({ handleSubmit, values }) => {
     27: [
       { value: 'Slot 1: 10:00 AM - 12:00 PM' },
       { value: 'Slot 2: 01:30 PM - 03:30 PM' },
-      { value: 'Slot 3: 03:45 PM - 05:30 PM' },
+      { value: 'Slot 3: 03:50 PM - 05:30 PM' },
       { value: 'Slot 4: 06:30 PM - 09:30 PM' },
       // More slots here
     ],
@@ -177,7 +177,7 @@ const PersonalForm = ({ handleSubmit, values }) => {
             }}
             value='27' // 27th August
           >
-            27 August, 2022
+            27 August, 2023
           </Select.Option>
           <Select.Option
             style={{
@@ -185,7 +185,7 @@ const PersonalForm = ({ handleSubmit, values }) => {
             }}
             value='28' // 28th August
           >
-            28 August, 2022
+            28 August, 2023
           </Select.Option>
         </Select>
       </Form.Item>
