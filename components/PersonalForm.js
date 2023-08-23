@@ -125,7 +125,7 @@ const PersonalForm = ({ handleSubmit, values }) => {
             style={{
               background: '#28126C',
             }}
-            value='2'
+            value='3'
           >
             3rd
           </Select.Option>
