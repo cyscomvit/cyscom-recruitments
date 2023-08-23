@@ -64,7 +64,7 @@ export default function Results({ user }) {
                 <span className={styles.span}>{dept}</span> department!
               </h1>
               <p className={styles.welcome}>
-                Be sure to join the WhatsApp Group for people selected for Round
+                Make sure to join the WhatsApp Group for Round
                 2{' '}
                 <a
                   href='https://chat.whatsapp.com/I6ihKqtsz7kFcDH8DcOBW3'
@@ -73,7 +73,7 @@ export default function Results({ user }) {
                 >
                   here
                 </a>
-                , to know the details and timings for your interview round!
+                , to know the details and timings for your interview!
               </p>
               <p className={styles.welcome}>
                 You will not be considered for the next round if you do not join
