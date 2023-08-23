@@ -22,9 +22,11 @@ export default function Navigation({ isAdmin }) {
           crossorigin='anonymous'
         />
         <div className={styles.logo}>
-          <a href='/'>
-            <Image src={logo} width={70} height={60} alt='logo' />
-          </a>
+          <Link href='/'>
+            <a>
+              <Image src={logo} width={70} height={60} alt='logo' />
+            </a>
+          </Link>
         </div>
         <ul className={styles.navOptions}>
           <li className={styles.navItem}>
