@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
     >
       <Head>
         <title>CYSCOM VITC Recruitments 2023-24</title>
-        <meta name='author' content='Hemang Ahuja' />
+        <meta name='author' content='Cyscom' />
       </Head>
       <Head>
         <meta

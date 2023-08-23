@@ -147,7 +147,8 @@ export default function HomePage() {
             </p>
             <p>
               Candidate Requirements: Candidates who have a creative mind and
-              are interested in designing are welcome.
+              are interested in video editing, graphic designing, etc. are most
+              welcome.
             </p>
           </div>
           <div className={styles.dept}>
@@ -168,7 +169,8 @@ export default function HomePage() {
             </p>
             <p>
               Candidate Requirements: Candidates who are interested in
-              organising, managing and planning events are welcome.
+              organising, managing and planning events, photography for events
+              are welcome.
             </p>
           </div>
           <div className={styles.dept}>
