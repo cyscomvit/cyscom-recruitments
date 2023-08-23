@@ -1,6 +1,8 @@
 import { Descriptions } from 'antd';
+import departmentQuestions from './DepartmentForm';
 
 export default function CandidateForm({ data }) {
+  console.log(data);
   return (
     <div style={{ width: '95%', margin: '0 auto' }}>
       <Descriptions title='Personal Data' bordered>
@@ -45,18 +47,15 @@ export default function CandidateForm({ data }) {
       )}
       <br></br>
       <Descriptions title='Department(s) applied for' bordered>
-        {data &&
-          Object.entries(data.departmentData).map((entry, index) => {
-            return (
-              <Descriptions.Item
-                labelStyle={{ width: '20%' }}
-                label={entry[0]}
-                key={index}
-              >
-                {entry[1].reason}
-              </Descriptions.Item>
-            );
-          })}
+        {Object.entries(data.departmentData).map(
+          ([department, questions], index) => (
+            <Descriptions.Item label={department} key={index}>
+              {Object.entries(questions).map(([questionKey, answer], idx) => (
+                <div key={idx}>{`${answer}`}</div>
+              ))}
+            </Descriptions.Item>
+          )
+        )}
       </Descriptions>
     </div>
   );
