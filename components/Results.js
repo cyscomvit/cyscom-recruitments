@@ -65,7 +65,7 @@ export default function Results({ user }) {
               </h1>
               <p className={styles.welcome}>
                 Be sure to join the WhatsApp Group for people selected for Round
-                2
+                2{' '}
                 <a
                   href='https://chat.whatsapp.com/I6ihKqtsz7kFcDH8DcOBW3'
                   target='_blank'
