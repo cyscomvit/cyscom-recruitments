@@ -9,7 +9,7 @@ export default function Department() {
   useEffect(() => {
     value.setPageState('department');
     value.setFormState(2);
-
+    //
     if (!value.state.isLoggedIn) {
       Router.push('/form');
     }
