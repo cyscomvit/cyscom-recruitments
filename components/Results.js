@@ -49,7 +49,7 @@ export default function Results({ user }) {
         <>
           {result.result == 'not_published' && (
             <h1 className={styles.alert}>
-              Results for Round 2 have not been published yet
+              Results for Round 1 have not been published yet
             </h1>
           )}
 
