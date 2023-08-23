@@ -1,48 +1,65 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 import { Alert } from 'antd';
 import CandidateForm from './CandidateForm';
-import styles from "../styles/global/global.module.css";
-import readFromFirestore from '../Firebase/ReadUser'
+import styles from '../styles/global/global.module.css';
+import readFromFirestore from '../Firebase/ReadUser';
 
 export default function Interview({ user }) {
-    const [interview, setInterview] = useState(null);
-    const [loading, setLoading] = useState(true);
-    useEffect(() => {
-        const getInterview = async () => {
-            const myinterview = await readFromFirestore(user.email);
-            setInterview(myinterview);
-            setLoading(false);
-        }
-        getInterview();
-    }, []);
+  const [interview, setInterview] = useState(null);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const getInterview = async () => {
+      const myinterview = await readFromFirestore(user.email);
+      setInterview(myinterview);
+      setLoading(false);
+    };
+    getInterview();
+  }, []);
 
-    const formatData = (interview) => {
-        if (!interview.interview) {
-            return "Error";
-        }
-        if (interview.interview.status == "not_assigned") {
-            return `Your interview details will be announced soon. Hang tight!`;
-        }
-        return `Your interview is scheduled on ${interview.interview.date} at ${interview.interview.time}`;
+  const formatData = (interview) => {
+    if (!interview.interview) {
+      return 'Error';
     }
+    if (interview.interview.status == 'not_assigned') {
+      return `Your interview details will be announced soon. Hang tight!`;
+    }
+    return `Your interview is scheduled on ${interview.interview.date} at ${interview.interview.time}`;
+  };
 
-    return (
-        <div>
-
-            {
-                loading ? <Alert className={styles.alert} message="Loading..." type="info"></Alert> : interview.error ? <Alert className={styles.alert} message={interview.error} type="error"></Alert> :
-                    <>
-                        <h1 className={styles.alert}>{formatData(interview)}</h1>
-                                                      {/*<CandidateForm data={interview}></CandidateForm>*/}
-                        <p style={{ width: '85%', margin: '0 auto', marginTop: '20px', fontSize: '1.3rem', textAlign: 'center' }}>
-                            Thank you for registering.
-
-                            Please do join our discord server <a href="https://discord.gg/rKqdRUDvSw">here</a>  and check the category "Recruitment 2022-23". Also do react to the message in #announcements of this category. For any queries, join our WhatsApp Help desk <a href="https://chat.whatsapp.com/GxcZ9UMQpSZKHci9EVpMOg">here.</a>
-
-                            Stay tuned!
-                        </p>
-                    </>
-            }
-        </div>
-    )
+  return (
+    <div>
+      {loading ? (
+        <Alert
+          className={styles.alert}
+          message='Loading...'
+          type='info'
+        ></Alert>
+      ) : interview.error ? (
+        <Alert
+          className={styles.alert}
+          message={interview.error}
+          type='error'
+        ></Alert>
+      ) : (
+        <>
+          <h1 className={styles.alert}>{formatData(interview)}</h1>
+          {/*<CandidateForm data={interview}></CandidateForm>*/}
+          <p
+            style={{
+              width: '85%',
+              margin: '0 auto',
+              marginTop: '20px',
+              fontSize: '1.3rem',
+              textAlign: 'center',
+            }}
+          >
+            Thank you for registering. For any queries, join our WhatsApp Help
+            desk{' '}
+            <a href='https://chat.whatsapp.com/I6ihKqtsz7kFcDH8DcOBW3'>here.</a>
+            Stay tuned!
+          </p>
+        </>
+      )}
+    </div>
+  );
 }
