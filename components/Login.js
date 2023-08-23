@@ -74,11 +74,15 @@ const Login = () => {
             handleLogin(user);
             setError(null);
           } else {
-            setError('Please login with your VIT email');
+            setError(
+              'Please login with your VIT email and try enabling 3rd party cookies in your browser'
+            );
           }
         }
       } catch (error) {
-        setError('Please login with your VIT email');
+        setError(
+          'Please login with your VIT email and try enabling 3rd party cookies in your browser'
+        );
       }
     };
     catchLogin();

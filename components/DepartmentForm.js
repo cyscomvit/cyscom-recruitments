@@ -28,7 +28,7 @@ const FormComponent = ({ handleSubmit, values }) => {
     'Event Management': ['Why do you want to join the Event Management team?'],
     'Content ': [
       'Why do you want to join the Content team?',
-      'Drop a link of your works (blogs, articles, etc.)',
+      'Share a sample of your writing (Google Drive - enable link sharing with (anyone with the link))',
     ],
     'Social Media': ['Why do you want to join the Social Media team?'],
   };
