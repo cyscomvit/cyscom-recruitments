@@ -3,14 +3,36 @@ import { Form, Input, Button, Select } from 'antd';
 import { useState } from 'react';
 const FormComponent = ({ handleSubmit, values }) => {
   const departments = [
-    'Development (Web-Dev and Projects)',
-    'CTF',
-    'Design',
+    'Development (Web-Dev and Open Source Projects)',
+    'Technical (CTF and Projects)',
+    'Design ',
     'Event Management',
-    'Content',
+    'Content ',
     'Social media',
-    'Sponsorship and Finance',
   ];
+
+  const departmentQuestions = {
+    'Development (Web-Dev and Open Source Projects)': [
+      'Why do you want to join the Development team and what are your skills?',
+      'Drop a link of your GitHub profile',
+    ],
+    'Technical (CTF and Projects)': [
+      'Why do you want to join the Technical team and what are your skills?',
+      'Do you have any experience in CTFs? (Yes/No)',
+    ],
+    'Design ': [
+      'Why do you want to join the Design team?',
+      'What are your skills? (Canva, Photoshop, After Effects, etc.)',
+      'Drop a link of your work (Google Drive - enable link sharing with (anyone with the link))',
+    ],
+    'Event Management': ['Why do you want to join the Event Management team?'],
+    'Content ': [
+      'Why do you want to join the Content team?',
+      'Drop a link of your works (blogs, articles, etc.)',
+    ],
+    'Social media': ['Why do you want to join the Social Media team?'],
+  };
+
   //pick departments and add reason to apply to each
   const [chosenDepartments, setChosenDepartments] = useState(
     Object.keys(values)
@@ -23,7 +45,7 @@ const FormComponent = ({ handleSubmit, values }) => {
   };
   return (
     <div style={{ width: '95%', margin: '0 auto' }}>
-      <p>Enter department</p>
+      <p>Choose department</p>
       <Select
         defaultValue={chosenDepartments}
         mode='multiple'
@@ -49,22 +71,27 @@ const FormComponent = ({ handleSubmit, values }) => {
         onFinish={handleSubmit}
         initialValues={values}
       >
-        {chosenDepartments.map((department) => {
-          return (
-            <>
-              <p>Why do you want to join the {department} team?</p>
-              <Form.Item
-                key={department}
-                name={[department, 'reason']}
-                rules={[
-                  { required: true, message: 'Please input your reason!' },
-                ]}
-              >
-                <Input.TextArea rows={1} style={{ width: '50%' }} />
-              </Form.Item>
-            </>
-          );
-        })}
+        {chosenDepartments.map((department) => (
+          <div key={department}>
+            <h2>{department}</h2>
+            {departmentQuestions[department] &&
+              departmentQuestions[department].map((question, index) => (
+                <Form.Item
+                  key={`question-${department}-${index}`}
+                  name={[department, `question${index}`]}
+                  rules={[
+                    { required: true, message: 'Please answer the question!' },
+                  ]}
+                >
+                  <Input.TextArea
+                    rows={1}
+                    style={{ width: '50%' }}
+                    placeholder={question}
+                  />
+                </Form.Item>
+              ))}
+          </div>
+        ))}
         {errorMessage}
         <Form.Item>
           <Button
