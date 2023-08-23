@@ -2,7 +2,6 @@ import { Descriptions } from 'antd';
 import departmentQuestions from './DepartmentForm';
 
 export default function CandidateForm({ data }) {
-  console.log(data);
   return (
     <div style={{ width: '95%', margin: '0 auto' }}>
       <Descriptions title='Personal Data' bordered>
