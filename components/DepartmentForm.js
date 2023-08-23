@@ -8,7 +8,7 @@ const FormComponent = ({ handleSubmit, values }) => {
     'Design ',
     'Event Management',
     'Content ',
-    'Social media',
+    'Social Media',
   ];
 
   const departmentQuestions = {
@@ -30,7 +30,7 @@ const FormComponent = ({ handleSubmit, values }) => {
       'Why do you want to join the Content team?',
       'Drop a link of your works (blogs, articles, etc.)',
     ],
-    'Social media': ['Why do you want to join the Social Media team?'],
+    'Social Media': ['Why do you want to join the Social Media team?'],
   };
 
   //pick departments and add reason to apply to each
