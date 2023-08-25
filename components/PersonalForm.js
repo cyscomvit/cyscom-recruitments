@@ -17,12 +17,18 @@ const PersonalForm = ({ handleSubmit, values }) => {
       { value: 'Slot 2: 01:30 PM - 03:30 PM' },
       { value: 'Slot 3: 03:50 PM - 05:30 PM' },
       { value: 'Slot 4: 06:30 PM - 09:30 PM' },
-      // More slots here
     ],
     28: [
       { value: 'Slot 1: 11:50 AM - 01:30 PM' },
       { value: 'Slot 2: 06:00 PM - 07:30 PM' },
-      // More slots here
+    ],
+    31: [
+      { value: 'Slot 1: 11:50 AM - 01:30 PM' },
+      { value: 'Slot 2: 06:00 PM - 07:30 PM' },
+    ],
+    1: [
+      { value: 'Slot 1: 11:50 AM - 01:30 PM' },
+      { value: 'Slot 2: 06:00 PM - 07:30 PM' },
     ],
   };
 
@@ -186,6 +192,22 @@ const PersonalForm = ({ handleSubmit, values }) => {
             value='28' // 28th August
           >
             28 August, 2023
+          </Select.Option>
+          <Select.Option
+            style={{
+              background: '#28126C',
+            }}
+            value='31' // 31st August
+          >
+            31 August, 2023
+          </Select.Option>
+          <Select.Option
+            style={{
+              background: '#28126C',
+            }}
+            value='1' // 1st September
+          >
+            1 September, 2023
           </Select.Option>
         </Select>
       </Form.Item>
