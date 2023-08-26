@@ -181,22 +181,6 @@ const PersonalForm = ({ handleSubmit, values }) => {
             style={{
               background: '#28126C',
             }}
-            value='27' // 27th August
-          >
-            27 August, 2023
-          </Select.Option>
-          <Select.Option
-            style={{
-              background: '#28126C',
-            }}
-            value='28' // 28th August
-          >
-            28 August, 2023
-          </Select.Option>
-          <Select.Option
-            style={{
-              background: '#28126C',
-            }}
             value='31' // 31st August
           >
             31 August, 2023
