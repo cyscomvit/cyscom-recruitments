@@ -12,12 +12,6 @@ const PersonalForm = ({ handleSubmit, values }) => {
   //form for name, personal email , vit email , phone number, college year,course,registeration number,slot preference
 
   const timeSlots = {
-    27: [
-      { value: 'Slot 1: 10:00 AM - 12:00 PM' },
-      { value: 'Slot 2: 01:30 PM - 03:30 PM' },
-      { value: 'Slot 3: 03:50 PM - 05:30 PM' },
-      { value: 'Slot 4: 06:30 PM - 09:30 PM' },
-    ],
     28: [
       { value: 'Slot 1: 11:50 AM - 01:30 PM' },
       { value: 'Slot 2: 06:00 PM - 07:30 PM' },
