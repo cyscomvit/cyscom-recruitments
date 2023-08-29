@@ -201,17 +201,18 @@ const PersonalForm = ({ handleSubmit, values }) => {
           className={styles.input}
           style={{ color: '#fff', margin: '0px 20px', height: '40px' }}
         >
-          {timeSlots[day].map((slot) => (
-            <Select.Option
-              key={slot.value}
-              style={{
-                background: '#28126C',
-              }}
-              value={slot.value}
-            >
-              {slot.label}
-            </Select.Option>
-          ))}
+          {timeSlots[day] &&
+            timeSlots[day].map((slot) => (
+              <Select.Option
+                key={slot.value}
+                style={{
+                  background: '#28126C',
+                }}
+                value={slot.value}
+              >
+                {slot.label}
+              </Select.Option>
+            ))}
         </Select>
       </Form.Item>
       <Form.Item style={{ width: '100%' }}>
