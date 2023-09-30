@@ -2,7 +2,15 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm i
+# or
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -32,3 +40,20 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Configuring .env file
+
+```
+admins=<admin-emails-comma-separated>
+CI=false
+NEXT_PUBLIC_FIREBASE_API_KEY=<API_KEY>
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=<AUTH_DOMAIN>.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=<PROJECT_ID>
+NEXT_PUBLIC_FIREBASE_DATABASE_URL=
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=<BUCKET>.appspot.com
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=<SENDER_ID>
+NEXT_PUBLIC_FIREBASE_APP_ID=<APP_ID>
+ADMIN_PASSWORD=<SET_ADMIN_PASSWORD>
+FIREBASE_ADMIN_CLIENT_EMAIL=<CLIENT_EMAIL>
+FIREBASE_ADMIN_PRIVATE_KEY=-----BEGIN PRIVATE KEY-----  -----END PRIVATE KEY-----\n
+```
