@@ -83,6 +83,22 @@ export default function AssignInterview({ handleSubmit }) {
             >
               28 August, 2023
             </Select.Option>
+            <Select.Option
+              style={{
+                background: '#28126C',
+              }}
+              value='31' // 31st August
+            >
+              31 August, 2023
+            </Select.Option>
+            <Select.Option
+              style={{
+                background: '#28126C',
+              }}
+              value='1' // 1st September
+            >
+              1 September, 2023
+            </Select.Option>
           </Select>
         </Form.Item>
         <Form.Item

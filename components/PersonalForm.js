@@ -12,17 +12,17 @@ const PersonalForm = ({ handleSubmit, values }) => {
   //form for name, personal email , vit email , phone number, college year,course,registeration number,slot preference
 
   const timeSlots = {
-    27: [
-      { value: 'Slot 1: 10:00 AM - 12:00 PM' },
-      { value: 'Slot 2: 01:30 PM - 03:30 PM' },
-      { value: 'Slot 3: 03:50 PM - 05:30 PM' },
-      { value: 'Slot 4: 06:30 PM - 09:30 PM' },
-      // More slots here
-    ],
     28: [
       { value: 'Slot 1: 11:50 AM - 01:30 PM' },
       { value: 'Slot 2: 06:00 PM - 07:30 PM' },
-      // More slots here
+    ],
+    31: [
+      { value: 'Slot 1: 11:50 AM - 01:30 PM' },
+      { value: 'Slot 2: 06:00 PM - 07:30 PM' },
+    ],
+    1: [
+      { value: 'Slot 1: 11:50 AM - 01:30 PM' },
+      { value: 'Slot 2: 06:00 PM - 07:30 PM' },
     ],
   };
 
@@ -175,17 +175,17 @@ const PersonalForm = ({ handleSubmit, values }) => {
             style={{
               background: '#28126C',
             }}
-            value='27' // 27th August
+            value='31' // 31st August
           >
-            27 August, 2023
+            31 August, 2023
           </Select.Option>
           <Select.Option
             style={{
               background: '#28126C',
             }}
-            value='28' // 28th August
+            value='1' // 1st September
           >
-            28 August, 2023
+            1 September, 2023
           </Select.Option>
         </Select>
       </Form.Item>
@@ -201,17 +201,18 @@ const PersonalForm = ({ handleSubmit, values }) => {
           className={styles.input}
           style={{ color: '#fff', margin: '0px 20px', height: '40px' }}
         >
-          {timeSlots[day].map((slot) => (
-            <Select.Option
-              key={slot.value}
-              style={{
-                background: '#28126C',
-              }}
-              value={slot.value}
-            >
-              {slot.label}
-            </Select.Option>
-          ))}
+          {timeSlots[day] &&
+            timeSlots[day].map((slot) => (
+              <Select.Option
+                key={slot.value}
+                style={{
+                  background: '#28126C',
+                }}
+                value={slot.value}
+              >
+                {slot.label}
+              </Select.Option>
+            ))}
         </Select>
       </Form.Item>
       <Form.Item style={{ width: '100%' }}>

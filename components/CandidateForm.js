@@ -27,7 +27,9 @@ export default function CandidateForm({ data }) {
           {data.personalData.registerationNumber}
         </Descriptions.Item>
         <Descriptions.Item label='Date Preference'>
-          {data.personalData.datePreference} August, 2023
+          {data.personalData.datePreference === '1'
+            ? `${data.personalData.datePreference} September, 2023`
+            : `${data.personalData.datePreference} August, 2023`}
         </Descriptions.Item>
         <Descriptions.Item label='Time Preference'>
           {data.personalData.timePreference}

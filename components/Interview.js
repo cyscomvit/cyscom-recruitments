@@ -53,9 +53,10 @@ export default function Interview({ user }) {
               textAlign: 'center',
             }}
           >
-            Thank you for registering. For any queries, join our WhatsApp Help
-            desk{' '}
-            <a href='https://chat.whatsapp.com/I6ihKqtsz7kFcDH8DcOBW3'>here.</a>
+            Thank you for registering. For any queries, join our{' '}
+            <a href='https://chat.whatsapp.com/I6ihKqtsz7kFcDH8DcOBW3'>
+              WhatsApp Help desk (Click here)
+            </a>
             Stay tuned!
           </p>
         </>
